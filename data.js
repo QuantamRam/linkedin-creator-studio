@@ -1,14 +1,14 @@
 // Verified Dataset for Ram Chandar Sanaboyina - LinkedIn Manager Dashboard
-// Updated on October 12, 2026 | Week's 6-Post Schedule & New Carousel Added
+// Updated for Recruiter Inbound & Viral Follower Growth
 // Category: "The AI-Native AI PM" | Target: 7,500 Realistic Milestone
 
 const DEFAULT_LINKEDIN_DATA = {
-  version: 3,
+  version: 4,
   creator: {
     name: "Ram chandar Sanaboyina",
     handle: "@ramchandarsanaboyina",
     profileUrl: "https://www.linkedin.com/in/ramchandarsanaboyina",
-    headline: "The AI-Native AI PM 🚀 | Author of 'Building AI Products That Ship' | Ex-Amazon/Blinkit Audience",
+    headline: "The AI-Native AI PM 🚀 | Systems, Evals & Model Cascades | Ex-Amazon/Blinkit Audience",
     avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=256&h=256&q=80",
     currentFollowers: 5021,
     targetFollowers: 7500,
@@ -78,6 +78,17 @@ const DEFAULT_LINKEDIN_DATA = {
   ],
   scheduledPosts: [
     {
+      id: "post-published-locus",
+      date: "2026-10-08",
+      time: "Published · 525 Imp",
+      format: "Document Carousel (8 slides)",
+      title: "The LoCuS Stack: Build Clickable AI Prototypes in 3 Hours",
+      status: "Published",
+      hookPreview: "A PRD is a guess written in the dark. A clickable prototype is an honest answer in 90 seconds. Unlocked 5k followers milestone!",
+      targetPillar: "Vibe-Coding Prototypes",
+      primaryGoal: "Saves & Reposts"
+    },
+    {
       id: "post-mon",
       date: "2026-10-12",
       time: "Today · 08:45 AM IST",
@@ -93,22 +104,22 @@ const DEFAULT_LINKEDIN_DATA = {
       date: "2026-10-13",
       time: "Tue · 08:45 AM IST",
       format: "Document Carousel (8 slides)",
-      title: "The LoCuS Stack: Build Clickable AI Prototypes in 3 Hours",
+      title: "How FAANG Interviews Senior AI PMs in 2026 (5 Questions & Rubrics)",
       status: "Scheduled",
-      hookPreview: "A PRD is a guess written in the dark. A clickable prototype is an honest answer in 90 seconds. Meet the LoCuS stack (Lovable + Cursor + Supabase)...",
-      targetPillar: "Vibe-Coding Prototypes",
-      primaryGoal: "Saves & Reposts"
+      hookPreview: "FAANG recruiters stopped asking 'How would you improve Spotify?'. In 2026, Senior AI PM interviews test 5 completely different capabilities:",
+      targetPillar: "Recruiter Inbounds",
+      primaryGoal: "Recruiter DMs & Follower Spikes"
     },
     {
       id: "post-wed",
       date: "2026-10-14",
       time: "Wed · 08:45 AM IST",
-      format: "Visual Framework Matrix",
-      title: "The 2-Question Filter: Why 80% of AI Roadmaps Quietly Die",
+      format: "Document Carousel (8 slides)",
+      title: "The Production AI Architecture Cheat Sheet for PMs",
       status: "Scheduled",
-      hookPreview: "Most PMs can define RAG and evals in a sentence now. That still hasn't told them which 4 of their 5 roadmap ideas to kill on Monday morning...",
-      targetPillar: "Product Strategy",
-      primaryGoal: "Comments & Saves"
+      hookPreview: "You don't need a CS PhD to lead AI products. But if you can't sketch this 4-tier system architecture, engineers won't respect your roadmap:",
+      targetPillar: "System Architecture",
+      primaryGoal: "Massive Saves & Authority"
     },
     {
       id: "post-thu",
@@ -119,32 +130,146 @@ const DEFAULT_LINKEDIN_DATA = {
       status: "Drafting",
       hookPreview: "We spent exactly $14,280 on model fine-tuning last quarter. 1 prompt eval caught 82% of errors. The fine-tuned weights failed completely on edge cases...",
       targetPillar: "Unit Economics",
-      primaryGoal: "High Trust & Saves"
+      primaryGoal: "VP of Product Respect"
     },
     {
       id: "post-sat",
       date: "2026-10-17",
       time: "Sat · 09:30 AM IST",
-      format: "BTS Case Study Teardown",
-      title: "A/B Prototype Teardown: 4 Hours of PM Vibe-Coding vs 3 Weeks of Sprint Debate",
+      format: "BTS Architecture Teardown",
+      title: "Why 90% of AI Agents Fail in Production (And The 3 State Fixes)",
       status: "Drafting",
-      hookPreview: "On Thursday at 10 AM, our team debated facet pills vs conversational search. Option A: $900 meeting. Option B: 2 Lovable URLs before lunch...",
-      targetPillar: "Vibe-Coding Prototypes",
-      primaryGoal: "Reposts & Inbounds"
+      hookPreview: "AI agents look magical in demo Loom videos. In production, 90% crash into infinite loops, context poisoning, or token bankruptcy. Here is the architecture fix:",
+      targetPillar: "Agent Systems",
+      primaryGoal: "Founder & Recruiter Inbounds"
     },
     {
       id: "post-sun",
       date: "2026-10-18",
       time: "Sun · 07:30 PM IST",
-      format: "Save-Bait Checklist",
+      format: "Save-Bait Career Roadmap",
       title: "The 2026 AI PM Skills Audit: The 4 Levers That Pay 22% More",
       status: "Drafting",
       hookPreview: "Everyone is telling PMs to take a 6-month Python bootcamp. In 2011, people told PMs to learn Objective-C. What gets you hired in 2026 is these 4 levers:",
       targetPillar: "Career Roadmap",
-      primaryGoal: "High Saves"
+      primaryGoal: "High Viral Saves"
     }
   ],
   carousels: [
+    {
+      id: "carousel-faang-interview",
+      title: "How FAANG Evaluates Senior AI PMs (2026 Rubric) 🎯",
+      subtitle: "The 5 case questions top tier recruiters & VP of Products actually test for $180k–$250k AI PM roles",
+      slidesCount: 8,
+      category: "Recruiter Inbound Magnet",
+      slides: [
+        {
+          num: 1,
+          tag: "RECRUITER & LEADERSHIP RUBRIC",
+          headline: "How FAANG Interviews Senior AI PMs in 2026.",
+          subtext: "Top tech recruiters stopped asking 'How would you improve Spotify?'\nHere are the 5 questions they ask to identify the top 1% of AI PMs 🎯"
+        },
+        {
+          num: 2,
+          tag: "QUESTION 1 · PROBABILISTIC PRODUCT DESIGN",
+          headline: "Q1: 'Your model has an 87% accuracy rate. How do you design the UX for the remaining 13%?'",
+          subtext: "❌ Junior Answer: 'I will fine-tune the model to get to 99%.'\n✅ Top 1% Answer: 'Model accuracy never hits 100%. I design Graceful Fallbacks: UI facet chips, human-in-the-loop review, and explicit confidence ceilings.'"
+        },
+        {
+          num: 3,
+          tag: "QUESTION 2 · UNIT ECONOMICS & MARGINS",
+          headline: "Q2: 'Inference latency is 3.2s and costs $0.06/query. How do you scale this to 500k DAU?'",
+          subtext: "❌ Junior Answer: 'Ask engineering to optimize the server.'\n✅ Top 1% Answer: 'Build a 3-tier cascade: Semantic cache first (80% hit rate, $0.0001), Flash model second, Frontier model only for top 5% edge cases.'"
+        },
+        {
+          num: 4,
+          tag: "QUESTION 3 · EVALUATION HARNESSES",
+          headline: "Q3: 'Engineering shipped a new prompt. How do you prove it didn't cause silent regressions?'",
+          subtext: "❌ Junior Answer: 'We test it manually on Slack.'\n✅ Top 1% Answer: 'Run an automated 100-sample golden eval dataset with synthetic edge cases. Score Accuracy, Latency, and Safety pass/fail gates before deployment.'"
+        },
+        {
+          num: 5,
+          tag: "QUESTION 4 · BUILD VS BUY VS ASSEMBLE",
+          headline: "Q4: 'Should we build an internal fine-tuned SLM or buy OpenAI Enterprise API?'",
+          subtext: "❌ Junior Answer: 'Building our own models protects IP.'\n✅ Top 1% Answer: 'Plot on the 2-Question Filter: Does this workflow create unique compounding data moat? If not, buying hosted API preserves 6 months of speed.'"
+        },
+        {
+          num: 6,
+          tag: "QUESTION 5 · BEHAVIORAL EXECUTION",
+          headline: "Q5: 'Tell me about an AI feature you killed before it reached production.'",
+          subtext: "❌ Junior Answer: 'We shipped everything on the roadmap.'\n✅ Top 1% Answer: 'We built a 4-hour clickable LoCuS prototype, tested with 8 customers, saw high hallucination friction, and killed it—saving $40k in engineering.'"
+        },
+        {
+          num: 7,
+          tag: "WHAT RECRUITERS ACTUALLY SCORE",
+          headline: "The 3 Signals That Unlock $180k–$250k+ Offers",
+          subtext: "1. Systems Empathy: You understand latency, tokens & context caching.\n2. Eval Rigor: You replace opinions with mathematical benchmarks.\n3. Shipping Velocity: You bring working prototypes, not 20-page PRDs."
+        },
+        {
+          num: 8,
+          tag: "SUMMARY & TAKEAWAY",
+          headline: "Save This For Your Next AI PM Interview",
+          subtext: "Bookmark this deck for your interview prep.\nWhat is the hardest AI product question you've ever faced in an interview?"
+        }
+      ]
+    },
+    {
+      id: "carousel-ai-architecture",
+      title: "The Production AI Architecture Cheat Sheet for PMs 🏛️",
+      subtitle: "The complete 4-layer system design diagram every Senior AI PM must know to earn engineering respect",
+      slidesCount: 8,
+      category: "Follower Virality & Authority",
+      slides: [
+        {
+          num: 1,
+          tag: "SYSTEM DESIGN FOR PMS",
+          headline: "The Production AI Architecture Cheat Sheet.",
+          subtext: "You do not need a CS PhD to lead AI products.\nBut if you cannot sketch these 4 layers, engineering will not respect your specs 🏛️"
+        },
+        {
+          num: 2,
+          tag: "LAYER 1 · INGESTION & CONTEXT CACHING",
+          headline: "Layer 1: The Input & Context Cache",
+          subtext: "Where the query begins. Top teams don't send raw prompts to an LLM.\nThey run Semantic Caching (Redis/Momento): If a similar query was answered in the last 24h, return cached response in 40ms for $0.00."
+        },
+        {
+          num: 3,
+          tag: "LAYER 2 · THE 3-TIER MODEL CASCADE",
+          headline: "Layer 2: The Model Routing Cascade",
+          subtext: "Never use a $0.03 frontier model for a $0.0001 classification task.\n🟢 Tier 1: Fast Regex / Embeddings (0ms, Free)\n🟡 Tier 2: Flash / Mini LLM (400ms, $0.001)\n🟣 Tier 3: O1 / Claude Opus only when reasoning is required"
+        },
+        {
+          num: 4,
+          tag: "LAYER 3 · RAG & RETRIEVAL RE-RANKING",
+          headline: "Layer 3: Hybrid Retrieval & Re-ranking",
+          subtext: "Basic vector search fails 30% of user queries.\nProduction RAG combines:\n1. Keyword BM25 + Vector Search (Hybrid Retrieval)\n2. Cross-Encoder Re-ranker (Cohere) to prune to the top 3 high-signal chunks."
+        },
+        {
+          num: 5,
+          tag: "LAYER 4 · GUARDRAILS & EVALUATION",
+          headline: "Layer 4: Real-Time Guardrails & Telemetry",
+          subtext: "Before the response reaches the user, it passes:\n1. PII & Toxicity Masking\n2. Hallucination Check (Grounding validation against retrieved docs)\n3. Latency & Token Usage Telemetry (Helicone / Langfuse)."
+        },
+        {
+          num: 6,
+          tag: "THE UX TRANSLATION",
+          headline: "How Architecture Translates to User Experience",
+          subtext: "Streaming UI isn't an aesthetic flair—it compresses perceived wait time by 70%.\nOptimistic UI updates keep users engaged while backend evals finish validation."
+        },
+        {
+          num: 7,
+          tag: "THE 3 FATAL MISTAKES",
+          headline: "Why Most AI Features Fail in Production",
+          subtext: "❌ Relying on 1 massive frontier prompt for everything.\n❌ Skipping evaluation harnesses in CI/CD pipelines.\n❌ Ignoring token inflation as chat history grows past 10 turns."
+        },
+        {
+          num: 8,
+          tag: "SAVE & REPOST",
+          headline: "Bookmark This Architecture Guide",
+          subtext: "Save this for your next system architecture discussion with engineering leads.\nWhich layer is the biggest bottleneck in your current stack?"
+        }
+      ]
+    },
     {
       id: "carousel-behavior-spec",
       title: "The Death of Jira User Stories for AI 📜",
@@ -196,162 +321,9 @@ const DEFAULT_LINKEDIN_DATA = {
         },
         {
           num: 8,
-          tag: "DOWNLOADABLE PLAYBOOK",
-          headline: "Get the 20-Example Eval Spreadsheet",
-          subtext: "📘 From 'Building AI Products That Ship' (₹999).\nIncludes downloadable Behavior Spec templates, decision matrices & ship gates.\n👉 Grab the link in my Featured section (or 1st comment below)!"
-        }
-      ]
-    },
-    {
-      id: "carousel-locus",
-      title: "The LoCuS Stack Playbook 🛠️",
-      subtitle: "How to build a clickable AI prototype in 3 hours without waiting for an engineering sprint",
-      slidesCount: 8,
-      category: "Vibe Coding",
-      slides: [
-        {
-          num: 1,
-          tag: "FOR PMS & BUILDERS",
-          headline: "How to build a clickable AI prototype in 3 hours.",
-          subtext: "(Without waiting for an engineering sprint) — The LoCuS Stack Playbook 🛠️"
-        },
-        {
-          num: 2,
-          tag: "THE PRD TRAP",
-          headline: "A PRD is a guess written in the dark.",
-          subtext: "It describes what you THINK people want. Everyone nods in the sprint planning meeting, but pictures a completely different product."
-        },
-        {
-          num: 3,
-          tag: "MEET THE STACK",
-          headline: "You only need 3 dependable pieces:",
-          subtext: "🟣 Lo = Lovable — First screen & interactive UI in 60 mins\n🟣 Cu = Cursor — Fix edge bugs & wire live logic\n🟣 S = Supabase — Real DB so test data actually persists"
-        },
-        {
-          num: 4,
-          tag: "STEP 1 & 2",
-          headline: "Write the 1-Page Brief & Prompt the Skeleton",
-          subtext: "Who is the user, what job are they doing, and what is the ONE flow? Prompt one screen at a time with loading and empty states."
-        },
-        {
-          num: 5,
-          tag: "STEP 3 & 4",
-          headline: "Make it Real & Break it on Purpose",
-          subtext: "Connect Cursor + Supabase. A prototype running on scripted fake inputs proves nothing. Feed it edge cases before real users do."
-        },
-        {
-          num: 6,
-          tag: "STEP 5",
-          headline: "Put it in 5 Customers' Hands by 4:00 PM",
-          subtext: "Record user screen sessions. Look for hesitation, confusion, and real delight. You just saved 3 weeks of dev debate."
-        },
-        {
-          num: 7,
-          tag: "THE SHIFT",
-          headline: "From 'PRD Author' to 'Proof Engineer'",
-          subtext: "The highest-paid AI PMs don't ask engineers for permission to validate hypotheses. They bring interactive working prototypes."
-        },
-        {
-          num: 8,
-          tag: "PLAYBOOK RESOURCE",
-          headline: "Get the Complete 8-Chapter Guide",
-          subtext: "📘 'Building AI Products That Ship' (₹999). Decision quality matrices, prompt scorecards, and live prototype prompts. Link in bio!"
-        }
-      ]
-    },
-    {
-      id: "carousel-two-question",
-      title: "The 2-Question Filter for AI Features",
-      subtitle: "How to stop roadmap debates and kill bad AI ideas before spending $50k",
-      slidesCount: 7,
-      category: "Product Strategy",
-      slides: [
-        {
-          num: 1,
-          tag: "ROADMAP PRIORITIZATION",
-          headline: "Stop debating opinions in roadmap meetings.",
-          subtext: "Here is the 2-Question Filter that saved our AI product team 3 months of wasted engineering."
-        },
-        {
-          num: 2,
-          tag: "THE CORE PROBLEM",
-          headline: "Most AI features are 'Cool Demos', not Products.",
-          subtext: "If an AI feature fails 10% of the time, does the user forgive it or do they abandon the entire app?"
-        },
-        {
-          num: 3,
-          tag: "QUESTION 1",
-          headline: "Q1: What is the cost of hallucination?",
-          subtext: "If hallucination causes embarrassment vs. legal breach vs. minor edit, that dictates Prompting vs. Guardrails vs. Killing it."
-        },
-        {
-          num: 4,
-          tag: "QUESTION 2",
-          headline: "Q2: Does this replace a manual task or create new value?",
-          subtext: "Replacing an existing high-friction flow has 10x higher retention than asking users to 'explore' a conversational chatbot."
-        },
-        {
-          num: 5,
-          tag: "THE 4-QUADRANT MATRIX",
-          headline: "The 2x2 Decision Quality Matrix",
-          subtext: "Top-Right: Ship immediately. Bottom-Right: The graveyard where 80% of shiny AI features belong."
-        },
-        {
-          num: 6,
-          tag: "EXECUTION RULE",
-          headline: "Never start a Jira sprint without a 20-Example eval.",
-          subtext: "Grade real sample outputs with your team before letting engineers build expensive model pipelines."
-        },
-        {
-          num: 7,
-          tag: "SUMMARY",
-          headline: "Build AI Products That Ship",
-          subtext: "Swipe right, bookmark this post, and grab the free Decision Quality Matrix from the link in comments."
-        }
-      ]
-    },
-    {
-      id: "carousel-unit-economics",
-      title: "AI Unit Economics as Product Design 💰",
-      subtitle: "Why model cascades and token budgets are the core PM responsibility in 2026",
-      slidesCount: 6,
-      category: "Unit Economics",
-      slides: [
-        {
-          num: 1,
-          tag: "COST & LATENCY",
-          headline: "Why AI Unit Economics is Product Design.",
-          subtext: "If your model costs $0.08 per request and your user triggers it 50 times a day, your SaaS pricing is already underwater."
-        },
-        {
-          num: 2,
-          tag: "THE CASCADE",
-          headline: "Rule 1: Build a 3-Tier Model Cascade",
-          subtext: "Tier 1: Fast regex/small model (free). Tier 2: Flash/Mini LLM ($0.001). Tier 3: Opus/O1 frontier model only for complex queries."
-        },
-        {
-          num: 3,
-          tag: "LATENCY TAX",
-          headline: "Every 500ms delay drops user retention by 8%",
-          subtext: "Streaming UI isn't an aesthetic choice — it's psychological latency compression."
-        },
-        {
-          num: 4,
-          tag: "TOKEN BUDGETS",
-          headline: "Assign Hard Token Budgets per Feature",
-          subtext: "Just like mobile apps have 50MB app size budgets, AI features need hard token ceilings."
-        },
-        {
-          num: 5,
-          tag: "PROFITABILITY GATES",
-          headline: "Test Unit Economics Before GA Launch",
-          subtext: "Run 1,000 simulated queries to verify blended cost-per-active-user stays under 15% of your subscription ARPU."
-        },
-        {
-          num: 6,
-          tag: "FULL BREAKDOWN",
-          headline: "From Chapter 5 of 'Building AI Products That Ship'",
-          subtext: "Includes downloadable spreadsheet calculator for model cascades and token burn rates. Link in 1st comment."
+          tag: "SUMMARY & TAKEAWAY",
+          headline: "Save & Share with Your Product Team",
+          subtext: "Bookmark this deck for your next sprint planning session.\nWhat is the biggest failure mode your team saw when trying to write PRDs for AI?"
         }
       ]
     }
