@@ -1,9 +1,9 @@
 // Verified Dataset for Ram Chandar Sanaboyina - LinkedIn Manager Dashboard
-// Updated with verified data from AggregateAnalytics_Ram chandar Sanaboyina_2026-10-06_2026-10-12.xlsx
+// Updated on October 12, 2026 | Week's 6-Post Schedule & New Carousel Added
 // Category: "The AI-Native AI PM" | Target: 7,500 Realistic Milestone
 
 const DEFAULT_LINKEDIN_DATA = {
-  version: 2,
+  version: 3,
   creator: {
     name: "Ram chandar Sanaboyina",
     handle: "@ramchandarsanaboyina",
@@ -43,7 +43,7 @@ const DEFAULT_LINKEDIN_DATA = {
     {
       id: "habit-post",
       label: "Publish scheduled post before 9:15 AM IST",
-      description: "Optimal morning window for Bengaluru & APAC tech tech hubs",
+      description: "Optimal morning window for Bengaluru & APAC tech hubs",
       category: "content",
       completed: true
     },
@@ -78,51 +78,130 @@ const DEFAULT_LINKEDIN_DATA = {
   ],
   scheduledPosts: [
     {
-      id: "post-1",
-      date: "2026-10-13",
-      time: "08:45 AM IST",
-      format: "Carousel (8 slides)",
-      title: "The LoCuS Stack: Build Clickable AI Prototypes in 3 Hours",
+      id: "post-mon",
+      date: "2026-10-12",
+      time: "Today · 08:45 AM IST",
+      format: "Document Carousel (8 slides)",
+      title: "The Death of Jira User Stories for AI: Meet The Behavior Spec",
       status: "Ready",
-      hookPreview: "A PRD is a guess written in the dark. A clickable prototype is an honest answer in 90 seconds. Here is the LoCuS stack...",
+      hookPreview: "R.I.P. to the traditional Jira user story for AI. Writing 'As a user I want...' burns $50,000 in model hallucinations. Here is the Behavior Spec:",
+      targetPillar: "Behavior Specs & Evals",
+      primaryGoal: "Saves & Reposts"
+    },
+    {
+      id: "post-tue",
+      date: "2026-10-13",
+      time: "Tue · 08:45 AM IST",
+      format: "Document Carousel (8 slides)",
+      title: "The LoCuS Stack: Build Clickable AI Prototypes in 3 Hours",
+      status: "Scheduled",
+      hookPreview: "A PRD is a guess written in the dark. A clickable prototype is an honest answer in 90 seconds. Meet the LoCuS stack (Lovable + Cursor + Supabase)...",
       targetPillar: "Vibe-Coding Prototypes",
       primaryGoal: "Saves & Reposts"
     },
     {
-      id: "post-2",
+      id: "post-wed",
       date: "2026-10-14",
-      time: "08:45 AM IST",
-      format: "Text + Framework Graphic",
+      time: "Wed · 08:45 AM IST",
+      format: "Visual Framework Matrix",
       title: "The 2-Question Filter: Why 80% of AI Roadmaps Quietly Die",
       status: "Scheduled",
-      hookPreview: "Most PMs can define RAG and evals in a sentence now. That still hasn't told them which 4 of their 5 roadmap ideas to kill on Monday...",
+      hookPreview: "Most PMs can define RAG and evals in a sentence now. That still hasn't told them which 4 of their 5 roadmap ideas to kill on Monday morning...",
       targetPillar: "Product Strategy",
       primaryGoal: "Comments & Saves"
     },
     {
-      id: "post-3",
+      id: "post-thu",
       date: "2026-10-15",
-      time: "09:00 AM IST",
-      format: "Carousel (7 slides)",
-      title: "Never Skip A Rung: The $50k Trap Between Prompt, RAG & Fine-Tuning",
+      time: "Thu · 08:45 AM IST",
+      format: "High-Trust Teardown",
+      title: "The $14,280 LLM API Fine-Tuning Ledger: Why We Rolled Back 70%",
       status: "Drafting",
-      hookPreview: "I watched an AI team burn $50,000 fine-tuning a model because they skipped prompt evaluation harnesses...",
-      targetPillar: "Model Cascades",
-      primaryGoal: "Reposts"
+      hookPreview: "We spent exactly $14,280 on model fine-tuning last quarter. 1 prompt eval caught 82% of errors. The fine-tuned weights failed completely on edge cases...",
+      targetPillar: "Unit Economics",
+      primaryGoal: "High Trust & Saves"
     },
     {
-      id: "post-4",
-      date: "2026-10-16",
-      time: "08:45 AM IST",
-      format: "Case Study Breakdown",
-      title: "The 20-Example Test: Grade Your LLM in a Spreadsheet Before Writing Code",
+      id: "post-sat",
+      date: "2026-10-17",
+      time: "Sat · 09:30 AM IST",
+      format: "BTS Case Study Teardown",
+      title: "A/B Prototype Teardown: 4 Hours of PM Vibe-Coding vs 3 Weeks of Sprint Debate",
       status: "Drafting",
-      hookPreview: "Before our engineering team wrote a single line of backend logic, we collected 20 edge cases and scored them in Google Sheets...",
-      targetPillar: "Behavior Specs",
-      primaryGoal: "Saves & Inbounds"
+      hookPreview: "On Thursday at 10 AM, our team debated facet pills vs conversational search. Option A: $900 meeting. Option B: 2 Lovable URLs before lunch...",
+      targetPillar: "Vibe-Coding Prototypes",
+      primaryGoal: "Reposts & Inbounds"
+    },
+    {
+      id: "post-sun",
+      date: "2026-10-18",
+      time: "Sun · 07:30 PM IST",
+      format: "Save-Bait Checklist",
+      title: "The 2026 AI PM Skills Audit: The 4 Levers That Pay 22% More",
+      status: "Drafting",
+      hookPreview: "Everyone is telling PMs to take a 6-month Python bootcamp. In 2011, people told PMs to learn Objective-C. What gets you hired in 2026 is these 4 levers:",
+      targetPillar: "Career Roadmap",
+      primaryGoal: "High Saves"
     }
   ],
   carousels: [
+    {
+      id: "carousel-behavior-spec",
+      title: "The Death of Jira User Stories for AI 📜",
+      subtitle: "Why 'As a user I want...' burns $50k in hallucinations — and the 4-part Behavior Spec that replaced it",
+      slidesCount: 8,
+      category: "Behavior Specs",
+      slides: [
+        {
+          num: 1,
+          tag: "FOR AI PMS & BUILDERS",
+          headline: "R.I.P. to Jira User Stories for AI Products.",
+          subtext: "Why 'As a user I want an AI that answers questions...' burns $50,000 in model hallucinations — and the Behavior Spec that replaced it 📜"
+        },
+        {
+          num: 2,
+          tag: "THE CORE PROBLEM",
+          headline: "Traditional SaaS was deterministic. AI is probabilistic.",
+          subtext: "In SaaS, if code compiles and tests pass, it works 100% of the time.\nIn Generative AI, a feature that works 85% of the time is a brand crisis in production."
+        },
+        {
+          num: 3,
+          tag: "THE 4-PART BEHAVIOR SPEC",
+          headline: "Part 1: The Forbidden Boundaries",
+          subtext: "Instead of writing what the AI SHOULD do, write the explicit boundary conditions where the model is STRICTLY FORBIDDEN from guessing."
+        },
+        {
+          num: 4,
+          tag: "THE 4-PART BEHAVIOR SPEC",
+          headline: "Part 2: The 20-Example Eval Matrix",
+          subtext: "Before writing product code, collect 20 real customer edge cases in a spreadsheet.\nGrade them: Accuracy (0-1), Latency (<1.5s), and Tone (Pass/Fail)."
+        },
+        {
+          num: 5,
+          tag: "THE 4-PART BEHAVIOR SPEC",
+          headline: "Part 3: Fallback Grace Architecture",
+          subtext: "Define the confidence ceiling: If logit probability drops below 0.85, the model NEVER hallucinates. It routes immediately to a deterministic UI action."
+        },
+        {
+          num: 6,
+          tag: "THE 4-PART BEHAVIOR SPEC",
+          headline: "Part 4: The Unit Economic Gate",
+          subtext: "Every behavior spec has a token budget: Cap queries at $0.003/request.\nIf it exceeds budget, cascade to a smaller 8B model automatically."
+        },
+        {
+          num: 7,
+          tag: "THE REALITY SHIFT",
+          headline: "Stop bringing Jira wishlists to sprint planning.",
+          subtext: "The highest-paid AI PMs don't ask engineers to guess model accuracy. They bring scored eval harnesses with mathematical confidence bounds."
+        },
+        {
+          num: 8,
+          tag: "DOWNLOADABLE PLAYBOOK",
+          headline: "Get the 20-Example Eval Spreadsheet",
+          subtext: "📘 From 'Building AI Products That Ship' (₹999).\nIncludes downloadable Behavior Spec templates, decision matrices & ship gates.\n👉 Grab the link in my Featured section (or 1st comment below)!"
+        }
+      ]
+    },
     {
       id: "carousel-locus",
       title: "The LoCuS Stack Playbook 🛠️",
