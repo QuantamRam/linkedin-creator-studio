@@ -1,9 +1,9 @@
 // Verified Dataset for Ram Chandar Sanaboyina - LinkedIn Manager Dashboard
-// Updated for Recruiter Inbound & Viral Follower Growth
+// Version 5: The 50/50 Flywheel Mix (Follower Virality + Playbook Conversion)
 // Category: "The AI-Native AI PM" | Target: 7,500 Realistic Milestone
 
 const DEFAULT_LINKEDIN_DATA = {
-  version: 4,
+  version: 5,
   creator: {
     name: "Ram chandar Sanaboyina",
     handle: "@ramchandarsanaboyina",
@@ -16,8 +16,9 @@ const DEFAULT_LINKEDIN_DATA = {
     milestoneAchievedDate: "2026-10-08",
     northStarFollowers: 50000,
     dailyVelocityTarget: 32, // net new followers per day
-    postWindow: "8:45 AM – 9:15 AM IST",
-    bestDays: ["Wednesday", "Tuesday"],
+    postWindow: "8:45 AM – 9:15 AM IST (Tue/Wed/Thu/Mon)",
+    weekendWindow: "09:30 AM IST (Sat) / 07:30 PM IST (Sun)",
+    bestDays: ["Tuesday", "Wednesday"],
     productOffer: "Building AI Products That Ship (Digital Playbook, ₹999)"
   },
   metrics: {
@@ -43,7 +44,7 @@ const DEFAULT_LINKEDIN_DATA = {
     {
       id: "habit-post",
       label: "Publish scheduled post before 9:15 AM IST",
-      description: "Optimal morning window for Bengaluru & APAC tech hubs",
+      description: "Optimal morning window for Bengaluru, Hyderabad & APAC tech corridor",
       category: "content",
       completed: true
     },
@@ -78,81 +79,70 @@ const DEFAULT_LINKEDIN_DATA = {
   ],
   scheduledPosts: [
     {
-      id: "post-published-locus",
-      date: "2026-10-08",
-      time: "Published · 525 Imp",
-      format: "Document Carousel (8 slides)",
-      title: "The LoCuS Stack: Build Clickable AI Prototypes in 3 Hours",
-      status: "Published",
-      hookPreview: "A PRD is a guess written in the dark. A clickable prototype is an honest answer in 90 seconds. Unlocked 5k followers milestone!",
-      targetPillar: "Vibe-Coding Prototypes",
-      primaryGoal: "Saves & Reposts"
-    },
-    {
       id: "post-mon",
       date: "2026-10-12",
-      time: "Today · 08:45 AM IST",
+      time: "Mon · 08:45 AM IST",
       format: "Document Carousel (8 slides)",
       title: "The Death of Jira User Stories for AI: Meet The Behavior Spec",
       status: "Ready",
-      hookPreview: "R.I.P. to the traditional Jira user story for AI. Writing 'As a user I want...' burns $50,000 in model hallucinations. Here is the Behavior Spec:",
-      targetPillar: "Behavior Specs & Evals",
-      primaryGoal: "Saves & Reposts"
+      hookPreview: "R.I.P. to traditional Jira user stories for AI. Writing 'As a user I want...' burns $50,000 in model hallucinations. Here is the Behavior Spec:",
+      targetPillar: "Playbook Conversion",
+      primaryGoal: "Playbook Sales & Comments"
     },
     {
       id: "post-tue",
       date: "2026-10-13",
-      time: "Tue · 08:45 AM IST",
+      time: "Tue · 08:45 AM IST (Prime Window)",
       format: "Document Carousel (8 slides)",
-      title: "How FAANG Interviews Senior AI PMs in 2026 (5 Questions & Rubrics)",
+      title: "How FAANG Evaluates Senior AI PMs in 2026 (5 Questions & Rubrics)",
       status: "Scheduled",
       hookPreview: "FAANG recruiters stopped asking 'How would you improve Spotify?'. In 2026, Senior AI PM interviews test 5 completely different capabilities:",
-      targetPillar: "Recruiter Inbounds",
-      primaryGoal: "Recruiter DMs & Follower Spikes"
+      targetPillar: "Recruiter Inbound Magnet",
+      primaryGoal: "Recruiter DMs & Follower Surge"
     },
     {
       id: "post-wed",
       date: "2026-10-14",
-      time: "Wed · 08:45 AM IST",
+      time: "Wed · 08:45 AM IST (Prime Window)",
       format: "Document Carousel (8 slides)",
       title: "The Production AI Architecture Cheat Sheet for PMs",
       status: "Scheduled",
-      hookPreview: "You don't need a CS PhD to lead AI products. But if you can't sketch this 4-tier system architecture, engineers won't respect your roadmap:",
-      targetPillar: "System Architecture",
-      primaryGoal: "Massive Saves & Authority"
+      hookPreview: "You don't need a CS PhD to lead AI products. But if you can't sketch this 4-tier architecture, engineers won't respect your roadmap:",
+      targetPillar: "Follower Virality & Authority",
+      primaryGoal: "Massive Saves & Reposts"
     },
     {
       id: "post-thu",
       date: "2026-10-15",
       time: "Thu · 08:45 AM IST",
-      format: "High-Trust Teardown",
+      format: "Odd-Precision Money Ledger",
       title: "The $14,280 LLM API Fine-Tuning Ledger: Why We Rolled Back 70%",
       status: "Drafting",
-      hookPreview: "We spent exactly $14,280 on model fine-tuning last quarter. 1 prompt eval caught 82% of errors. The fine-tuned weights failed completely on edge cases...",
-      targetPillar: "Unit Economics",
-      primaryGoal: "VP of Product Respect"
+      hookPreview: "We spent exactly $14,280 on model fine-tuning last quarter. 1 prompt eval caught 82% of errors. The fine-tuned weights failed on edge cases...",
+      targetPillar: "Playbook Conversion",
+      primaryGoal: "High Trust & Playbook Sales"
     },
     {
       id: "post-sat",
       date: "2026-10-17",
-      time: "Sat · 09:30 AM IST",
+      time: "Sat · 09:30 AM IST (Weekend Morning)",
       format: "BTS Architecture Teardown",
-      title: "Why 90% of AI Agents Fail in Production (And The 3 State Fixes)",
+      title: "Why 90% of AI Agents Fail in Production (And The 3 State Fixes 🤖)",
       status: "Drafting",
-      hookPreview: "AI agents look magical in demo Loom videos. In production, 90% crash into infinite loops, context poisoning, or token bankruptcy. Here is the architecture fix:",
-      targetPillar: "Agent Systems",
-      primaryGoal: "Founder & Recruiter Inbounds"
+      hookPreview: "AI agents look magical in demo Loom videos. In production, 90% crash into infinite loops, context poisoning, or token bankruptcy. Here is the fix:",
+      targetPillar: "Recruiter & Founder Magnet",
+      primaryGoal: "Founder DMs & Tech Cred"
     },
     {
       id: "post-sun",
       date: "2026-10-18",
-      time: "Sun · 07:30 PM IST",
+      time: "Sun · 07:30 PM IST (Pre-Monday Peak)",
       format: "Save-Bait Career Roadmap",
       title: "The 2026 AI PM Skills Audit: The 4 Levers That Pay 22% More",
       status: "Drafting",
       hookPreview: "Everyone is telling PMs to take a 6-month Python bootcamp. In 2011, people told PMs to learn Objective-C. What gets you hired in 2026 is these 4 levers:",
-      targetPillar: "Career Roadmap",
-      primaryGoal: "High Viral Saves"
+      targetPillar: "Playbook Conversion + Saves",
+      primaryGoal: "Sunday Night Bookmark Binge"
     }
   ],
   carousels: [
@@ -167,43 +157,43 @@ const DEFAULT_LINKEDIN_DATA = {
           num: 1,
           tag: "RECRUITER & LEADERSHIP RUBRIC",
           headline: "How FAANG Interviews Senior AI PMs in 2026.",
-          subtext: "Top tech recruiters stopped asking 'How would you improve Spotify?'\nHere are the 5 questions they ask to identify the top 1% of AI PMs 🎯"
+          subtext: "Top tech recruiters stopped asking 'How would you improve Spotify?'\nHere are the 5 case questions they use to test the top 1% of AI PMs 🎯"
         },
         {
           num: 2,
-          tag: "QUESTION 1 · PROBABILISTIC PRODUCT DESIGN",
+          tag: "QUESTION 1 · PROBABILISTIC DESIGN",
           headline: "Q1: 'Your model has an 87% accuracy rate. How do you design the UX for the remaining 13%?'",
-          subtext: "❌ Junior Answer: 'I will fine-tune the model to get to 99%.'\n✅ Top 1% Answer: 'Model accuracy never hits 100%. I design Graceful Fallbacks: UI facet chips, human-in-the-loop review, and explicit confidence ceilings.'"
+          subtext: "❌ Junior Answer: 'I will ask engineering to fine-tune the model to get to 99%.'\n✅ Top 1% Answer: 'Model accuracy never hits 100%. I design Graceful Fallbacks: clickable filter chips, human-in-the-loop review queues, and explicit confidence ceilings.'"
         },
         {
           num: 3,
-          tag: "QUESTION 2 · UNIT ECONOMICS & MARGINS",
+          tag: "QUESTION 2 · UNIT ECONOMICS",
           headline: "Q2: 'Inference latency is 3.2s and costs $0.06/query. How do you scale this to 500k DAU?'",
-          subtext: "❌ Junior Answer: 'Ask engineering to optimize the server.'\n✅ Top 1% Answer: 'Build a 3-tier cascade: Semantic cache first (80% hit rate, $0.0001), Flash model second, Frontier model only for top 5% edge cases.'"
+          subtext: "❌ Junior Answer: 'Ask engineers to buy faster GPU clusters.'\n✅ Top 1% Answer: 'Build a 3-tier cascade: Semantic cache first (80% hit rate, $0.0001, 30ms), Flash model second for intent classification, and frontier reasoning models only for the top 5% edge cases.'"
         },
         {
           num: 4,
-          tag: "QUESTION 3 · EVALUATION HARNESSES",
+          tag: "QUESTION 3 · EVALUATION RIGOR",
           headline: "Q3: 'Engineering shipped a new prompt. How do you prove it didn't cause silent regressions?'",
-          subtext: "❌ Junior Answer: 'We test it manually on Slack.'\n✅ Top 1% Answer: 'Run an automated 100-sample golden eval dataset with synthetic edge cases. Score Accuracy, Latency, and Safety pass/fail gates before deployment.'"
+          subtext: "❌ Junior Answer: 'We test 5 examples manually in a Slack channel.'\n✅ Top 1% Answer: 'Run an automated 100-sample golden eval dataset with synthetic edge cases. Score Accuracy, Latency, and Safety pass/fail gates before merging to production.'"
         },
         {
           num: 5,
-          tag: "QUESTION 4 · BUILD VS BUY VS ASSEMBLE",
-          headline: "Q4: 'Should we build an internal fine-tuned SLM or buy OpenAI Enterprise API?'",
-          subtext: "❌ Junior Answer: 'Building our own models protects IP.'\n✅ Top 1% Answer: 'Plot on the 2-Question Filter: Does this workflow create unique compounding data moat? If not, buying hosted API preserves 6 months of speed.'"
+          tag: "QUESTION 4 · STRATEGIC MOATS",
+          headline: "Q4: 'Should we train our own internal open-source SLM or buy OpenAI Enterprise API?'",
+          subtext: "❌ Junior Answer: 'Building our own model protects our IP.'\n✅ Top 1% Answer: 'Plot on the 2-Question Filter: Does this workflow create a compounding proprietary data flywheel? If not, buying hosted APIs preserves 6 months of shipping velocity.'"
         },
         {
           num: 6,
-          tag: "QUESTION 5 · BEHAVIORAL EXECUTION",
+          tag: "QUESTION 5 · EXECUTION SCARS",
           headline: "Q5: 'Tell me about an AI feature you killed before it reached production.'",
-          subtext: "❌ Junior Answer: 'We shipped everything on the roadmap.'\n✅ Top 1% Answer: 'We built a 4-hour clickable LoCuS prototype, tested with 8 customers, saw high hallucination friction, and killed it—saving $40k in engineering.'"
+          subtext: "❌ Junior Answer: 'We shipped every feature on our roadmap.'\n✅ Top 1% Answer: 'We built a 4-hour clickable LoCuS prototype, tested with 8 real customers, saw high hallucination friction, and killed it immediately—saving $40,000 in dev time.'"
         },
         {
           num: 7,
           tag: "WHAT RECRUITERS ACTUALLY SCORE",
           headline: "The 3 Signals That Unlock $180k–$250k+ Offers",
-          subtext: "1. Systems Empathy: You understand latency, tokens & context caching.\n2. Eval Rigor: You replace opinions with mathematical benchmarks.\n3. Shipping Velocity: You bring working prototypes, not 20-page PRDs."
+          subtext: "1. Systems Empathy: You speak latency, token budgets, and context window economics.\n2. Eval Rigor: You replace roadmaps of opinions with mathematical confidence bounds.\n3. Shipping Velocity: You validate with rapid working prototypes, not 20-page PRDs."
         },
         {
           num: 8,
@@ -275,7 +265,7 @@ const DEFAULT_LINKEDIN_DATA = {
       title: "The Death of Jira User Stories for AI 📜",
       subtitle: "Why 'As a user I want...' burns $50k in hallucinations — and the 4-part Behavior Spec that replaced it",
       slidesCount: 8,
-      category: "Behavior Specs",
+      category: "Playbook Conversion",
       slides: [
         {
           num: 1,
@@ -321,9 +311,66 @@ const DEFAULT_LINKEDIN_DATA = {
         },
         {
           num: 8,
-          tag: "SUMMARY & TAKEAWAY",
-          headline: "Save & Share with Your Product Team",
-          subtext: "Bookmark this deck for your next sprint planning session.\nWhat is the biggest failure mode your team saw when trying to write PRDs for AI?"
+          tag: "DOWNLOADABLE PLAYBOOK",
+          headline: "Get the 20-Example Eval Spreadsheet",
+          subtext: "📘 From 'Building AI Products That Ship' (₹999).\nIncludes downloadable Behavior Spec templates, decision matrices & ship gates.\n👉 Grab the link in my Featured section (or 1st comment below)!"
+        }
+      ]
+    },
+    {
+      id: "carousel-agents-failing",
+      title: "Why 90% of AI Agents Fail in Production 🤖",
+      subtitle: "The 3 critical state machine & context drift architectural fixes top AI PMs implement",
+      slidesCount: 8,
+      category: "Recruiter & Founder Magnet",
+      slides: [
+        {
+          num: 1,
+          tag: "AGENT SYSTEMS IN PRODUCTION",
+          headline: "Why 90% of AI Agents Fail in Production.",
+          subtext: "AI agents look magical in 60-second demo Loom videos.\nIn production with messy user inputs, 90% crash into infinite loops, context poisoning, or token bankruptcy 🤖"
+        },
+        {
+          num: 2,
+          tag: "FAILURE MODE 1 · THE INFINITE TOOL LOOP",
+          headline: "Failure 1: The Infinite Tool Calling Trap",
+          subtext: "PMs give an agent 12 open-ended API tools and pray it picks the right sequence.\nInstead, the model gets stuck in repetitive retrieval loops, burning $4 per task before timing out."
+        },
+        {
+          num: 3,
+          tag: "THE ARCHITECTURE FIX 1",
+          headline: "Fix 1: Deterministic State Machines (DAGs)",
+          subtext: "Never let an agent plan its entire execution graph dynamically.\nConstrain steps into strict Directed Acyclic Graphs (DAGs): Step A must validate before Step B is unlocked."
+        },
+        {
+          num: 4,
+          tag: "FAILURE MODE 2 · CONTEXT POISONING",
+          headline: "Failure 2: Context Window Contamination",
+          subtext: "As the agent calls multiple tools, raw JSON payloads flood the prompt.\nBy turn 6, reasoning accuracy drops by 45% because the context window is drowning in irrelevant tool noise."
+        },
+        {
+          num: 5,
+          tag: "THE ARCHITECTURE FIX 2",
+          headline: "Fix 2: Sliding Context Summarization",
+          subtext: "Never pass raw tool outputs back to the orchestrator.\nPass tool responses through an intermediate extraction schema: return only 3 key fields, pruning 90% of token bloat."
+        },
+        {
+          num: 6,
+          tag: "FAILURE MODE 3 · ZERO HUMAN ESCAPES",
+          headline: "Failure 3: The Unsupervised Mutation Danger",
+          subtext: "Letting an LLM execute database mutations or send external emails without human confirmation is a disaster waiting to happen."
+        },
+        {
+          num: 7,
+          tag: "THE ARCHITECTURE FIX 3",
+          headline: "Fix 3: Human-in-the-Loop Circuit Breakers",
+          subtext: "Read actions are fully autonomous. Write actions require explicit human confirmation.\nEvery agent spec must have a hard budget breaker: auto-abort if a run exceeds $0.05 or 4 steps."
+        },
+        {
+          num: 8,
+          tag: "SAVE & SHARE",
+          headline: "Build Workflows with AI, Not Toys",
+          subtext: "Save this post to audit your team's autonomous agent architecture.\nWhat has been your biggest bottleneck deploying agents to production?"
         }
       ]
     }
