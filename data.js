@@ -3,7 +3,7 @@
 // Category: "The AI-Native AI PM" | Target: 7,500 Realistic Milestone
 
 const DEFAULT_LINKEDIN_DATA = {
-  version: 5,
+  version: 6,
   creator: {
     name: "Ram chandar Sanaboyina",
     handle: "@ramchandarsanaboyina",
@@ -19,7 +19,7 @@ const DEFAULT_LINKEDIN_DATA = {
     postWindow: "8:45 AM – 9:15 AM IST (Tue/Wed/Thu/Mon)",
     weekendWindow: "09:30 AM IST (Sat) / 07:30 PM IST (Sun)",
     bestDays: ["Tuesday", "Wednesday"],
-    productOffer: "Building AI Products That Ship (Digital Playbook, ₹999)"
+    productOffer: "The AI-Native PM Operating System & Implementation Toolkit (₹999 · 100% Corporate L&D Reimbursable with Official Invoice & Certificate)"
   },
   metrics: {
     totalImpressions12M: 194563,
@@ -311,9 +311,9 @@ const DEFAULT_LINKEDIN_DATA = {
         },
         {
           num: 8,
-          tag: "DOWNLOADABLE PLAYBOOK",
-          headline: "Get the 20-Example Eval Spreadsheet",
-          subtext: "📘 From 'Building AI Products That Ship' (₹999).\nIncludes downloadable Behavior Spec templates, decision matrices & ship gates.\n👉 Grab the link in my Featured section (or 1st comment below)!"
+          tag: "PRODUCTION TOOLKIT · 100% L&D REIMBURSABLE",
+          headline: "Get The AI-Native PM Operating System",
+          subtext: "🛠️ Stop building from scratch. Get the production eval spreadsheets, Behavior Spec templates & prototype prompts (₹999).\n🧾 100% REIMBURSABLE: Official tax invoice & completion certificate provided for your company's L&D expense claim!\n👉 Link pinned in Featured & 1st comment below."
         }
       ]
     },
