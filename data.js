@@ -3,7 +3,7 @@
 // Category: "The AI-Native AI PM" | Target: 7,500 Realistic Milestone
 
 const DEFAULT_LINKEDIN_DATA = {
-  version: 6,
+  version: 7,
   creator: {
     name: "Ram chandar Sanaboyina",
     handle: "@ramchandarsanaboyina",
@@ -30,6 +30,81 @@ const DEFAULT_LINKEDIN_DATA = {
     engagementRate: "3.1%",
     profileConversionRate: "12.6%",
     totalPosts: 43
+  },
+  commercial: {
+    productName: "The AI-Native PM Operating System & Implementation Toolkit",
+    unitPriceINR: 999,
+    salesCount: 0,
+    salesTarget: 50,
+    grossRevenueINR: 0,
+    leadMagnetRequests: 0,
+    leadConversionRateEst: 25,
+    carouselsPosted: 1,
+    carouselsScheduled: 4,
+    corporateReimbursableRate: 100,
+    averageLdBudgetINR: 50000,
+    upcomingCommercialIdeas: [
+      {
+        id: "comm-1",
+        title: "The 7 AI Product Ship Gates (Pre-Launch Production Audit)",
+        tag: "Pre-Launch Audit",
+        leadMagnetTrigger: "GATES",
+        deliverable: "1-Page Printable 7-Gate Scorecard PDF",
+        commercialAngle: "Reliability & Eval Harness (Prevents $50k failures)",
+        status: "Ready to Publish",
+        targetAudience: "Senior AI PMs & Tech Leads"
+      },
+      {
+        id: "comm-2",
+        title: "The $14,280 LLM API Fine-Tuning Ledger: Why We Rolled Back 70%",
+        tag: "Cost Ledger",
+        leadMagnetTrigger: "LEDGER",
+        deliverable: "Open-Source API Cost & Fine-Tuning Ledger Sheet",
+        commercialAngle: "Cost Optimization & Cascade Formula (Saves 70% GPU bills)",
+        status: "Drafting",
+        targetAudience: "Group PMs, Engineering Managers & Founders"
+      },
+      {
+        id: "comm-3",
+        title: "The Death of Jira User Stories for AI: Meet The Behavior Spec",
+        tag: "PRD Evolution",
+        leadMagnetTrigger: "SPEC",
+        deliverable: "Behavior Spec Notion Template + 15 Forbidden Edge Cases",
+        commercialAngle: "Negative Testing & Eval Matrix (Replaces Jira for AI)",
+        status: "Published / Active",
+        targetAudience: "Product Managers & Engineering Leads"
+      },
+      {
+        id: "comm-4",
+        title: "The 3-Tier Model Routing Cascade: Slash API Bills by 74%",
+        tag: "Architecture & Cascades",
+        leadMagnetTrigger: "CASCADE",
+        deliverable: "Semantic Cache + Flash Routing Flowchart",
+        commercialAngle: "Latency & Gross Margins (30ms TTFT + $0.0001 Cache)",
+        status: "Scheduled",
+        targetAudience: "AI PMs & Technical Product Leads"
+      },
+      {
+        id: "comm-5",
+        title: "The 50-Sample Golden Eval Spreadsheet Walkthrough",
+        tag: "CI/CD Evals",
+        leadMagnetTrigger: "EVALS",
+        deliverable: "Golden Eval Test Suite & Factual Grounding Rubric",
+        commercialAngle: "Benchmarking & Regression Defense (≥92% Grounding)",
+        status: "In Pipeline",
+        targetAudience: "Senior PMs & AI Architects"
+      },
+      {
+        id: "comm-6",
+        title: "How to Claim ₹999 from Your Employer’s L&D Budget (Zero Personal Cost)",
+        tag: "Corporate Expense Hack",
+        leadMagnetTrigger: "REIMBURSE",
+        deliverable: "Pre-Written L&D Claim Email Template + Sample Tax Invoice",
+        commercialAngle: "Zero Personal Price Friction (Official GST Invoice + Cert)",
+        status: "In Pipeline",
+        targetAudience: "Enterprise PMs (Amazon, Google, Blinkit, Flipkart)"
+      }
+    ]
   },
   history7D: [
     { date: "10/06/2026", impressions: 138, engagements: 1, followers: 4995, newFollowers: 22 },

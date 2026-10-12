@@ -288,6 +288,148 @@
 
     </section>
 
+    <!-- Commercial Engine: Book & Solution Sales Command Center -->
+    <section class="commercial-engine-section">
+      <div class="apple-card commercial-hero-card">
+        <div class="card-ambient-light" style="background: radial-gradient(circle at 85% 15%, rgba(48, 209, 88, 0.12), transparent 55%);"></div>
+        
+        <div class="section-header-row" style="margin-bottom: 1.25rem;">
+          <div>
+            <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.25rem;">
+              <span class="caption-label" style="color: var(--apple-green);">COMMERCIAL ENGINE · REVENUE & FUNNEL</span>
+              <span class="milestone-badge" style="background: rgba(48, 209, 88, 0.12); color: var(--apple-green); border-color: rgba(48, 209, 88, 0.25);">
+                ₹999 Operating System
+              </span>
+            </div>
+            <h2 class="section-title">
+              The AI-Native PM Operating System — Commercial Hub
+            </h2>
+            <p class="section-subtitle">
+              Track ₹999 toolkit sales, lead magnet comment triggers, carousel publishing mix, and 100% corporate L&D reimbursements
+            </p>
+          </div>
+
+          <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center;">
+            <button id="quickIncSaleBtn" class="nav-pill-btn primary" title="Record +1 sale (₹999)">
+              <span>💰</span>
+              <span>+1 Sale</span>
+            </button>
+            <button id="quickIncLeadBtn" class="nav-pill-btn" title="Record +1 lead magnet DM request">
+              <span>💬</span>
+              <span>+1 Lead ("GATES")</span>
+            </button>
+            <button id="copyLdClaimEmailBtn" class="nav-pill-btn" title="Copy pre-written corporate reimbursement email">
+              <span>🧾</span>
+              <span>Copy L&D Email</span>
+            </button>
+            <button id="copyDmScriptBtn" class="nav-pill-btn" title="Copy 2-step DM lead magnet script">
+              <span>✉️</span>
+              <span>Copy DM Script</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- 4 Stat Cards Row -->
+        <div class="commercial-stats-grid">
+          
+          <!-- Stat 1: Sales & Revenue -->
+          <div class="commercial-stat-box">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+              <span class="caption-label">SALES & REVENUE</span>
+              <span class="tag-pill" style="font-size: 0.68rem; background: rgba(48, 209, 88, 0.12); color: var(--apple-green);">Active Offer</span>
+            </div>
+            <div class="commercial-number-row">
+              <span id="commSalesCount" class="big-stat-number tabular positive">0</span>
+              <span class="target-stat-number tabular">/ 50 Goal</span>
+            </div>
+            <div class="commercial-revenue-text">
+              Gross: <strong id="commGrossRevenue" class="tabular" style="color: var(--apple-green);">₹0</strong> (₹999 / unit)
+            </div>
+            <div class="progress-track" style="margin-top: 0.65rem; height: 6px;">
+              <div id="commSalesProgressBar" class="progress-fill" style="width: 0%; background: var(--apple-green);"></div>
+            </div>
+            <div style="font-size: 0.72rem; color: var(--text-tertiary); margin-top: 4px;">Milestone MRR Target: ₹49,950</div>
+          </div>
+
+          <!-- Stat 2: Lead Magnet Requests & Pipeline -->
+          <div class="commercial-stat-box">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+              <span class="caption-label">LEAD MAGNET FUNNEL</span>
+              <span class="tag-pill" style="font-size: 0.68rem; background: rgba(100, 210, 255, 0.12); color: var(--apple-cyan);">Comment Triggers</span>
+            </div>
+            <div class="commercial-number-row">
+              <span id="commLeadCount" class="big-stat-number tabular" style="color: var(--apple-cyan);">0</span>
+              <span class="target-stat-number tabular">DM Leads</span>
+            </div>
+            <div class="commercial-revenue-text">
+              Pipeline Est: <strong id="commPipelineRevenue" class="tabular" style="color: var(--apple-cyan);">₹0</strong> (25% Conv.)
+            </div>
+            <div style="font-size: 0.72rem; color: var(--text-tertiary); margin-top: 0.65rem;">
+              Triggers: <code>"GATES"</code> · <code>"LEDGER"</code> · <code>"SPEC"</code>
+            </div>
+          </div>
+
+          <!-- Stat 3: Carousels Bank & Content Mix -->
+          <div class="commercial-stat-box">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+              <span class="caption-label">CONTENT PRODUCTION MIX</span>
+              <span class="tag-pill" style="font-size: 0.68rem; background: rgba(191, 90, 242, 0.12); color: var(--apple-purple);">50/50 Flywheel</span>
+            </div>
+            <div class="commercial-number-row">
+              <span id="commCarouselsCount" class="big-stat-number tabular" style="color: var(--apple-purple);">5</span>
+              <span class="target-stat-number tabular">Carousels</span>
+            </div>
+            <div class="commercial-revenue-text">
+              <span id="commCarouselsPosted">1</span> Posted · <span id="commCarouselsScheduled">4</span> In Pipeline
+            </div>
+            <div style="font-size: 0.72rem; color: var(--text-tertiary); margin-top: 0.65rem;">
+              50% Solution Sales · 50% Inbound Magnet
+            </div>
+          </div>
+
+          <!-- Stat 4: Corporate L&D Reimbursement Readiness -->
+          <div class="commercial-stat-box">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+              <span class="caption-label">CORPORATE L&D ANGLE</span>
+              <span class="tag-pill" style="font-size: 0.68rem; background: rgba(10, 132, 255, 0.12); color: var(--apple-blue);">100% Covered</span>
+            </div>
+            <div class="commercial-number-row">
+              <span class="big-stat-number tabular" style="color: var(--apple-blue); font-size: 2rem;">100%</span>
+              <span class="target-stat-number tabular" style="font-size: 0.85rem;">Reimbursable</span>
+            </div>
+            <div class="commercial-revenue-text">
+              GST Tax Invoice + Certificate of Completion
+            </div>
+            <div style="font-size: 0.72rem; color: var(--text-tertiary); margin-top: 0.65rem;">
+              38% Senior PMs · Amazon, Google, Blinkit
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Commercial Strategy & Upcoming Carousel Ideas Bank -->
+        <div class="commercial-pipeline-container" style="margin-top: 1.5rem; border-top: 1px solid var(--glass-border-subtle); padding-top: 1.25rem;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem;">
+            <div>
+              <span class="caption-label" style="color: var(--apple-orange);">UPCOMING COMMERCIAL CAROUSELS PIPELINE</span>
+              <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-top: 2px;">
+                High-Converting Solution Carousels (Engineered for Sales & Inbound Leads)
+              </h3>
+            </div>
+            <span style="font-size: 0.78rem; color: var(--text-tertiary);">
+              Positioned as <strong>Production Implementation OS</strong>, never just an eBook
+            </span>
+          </div>
+
+          <!-- Commercial Ideas Grid -->
+          <div id="commercialIdeasGrid" class="commercial-ideas-grid">
+            <!-- Populated dynamically from state -->
+          </div>
+        </div>
+
+      </div>
+    </section>
+
     <!-- Apple Interactive Carousel Studio & Deck Viewer -->
     <section class="carousel-studio-section">
       <div class="section-header-row">

@@ -1502,3 +1502,116 @@ h1, h2, h3, h4, .headline, .large-title {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* ==========================================================================
+   Commercial Engine & Solution Sales Hub Styling
+   ========================================================================== */
+.commercial-engine-section {
+  margin-top: 2rem;
+}
+
+.commercial-hero-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.commercial-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1rem;
+}
+
+.commercial-stat-box {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--glass-border-subtle);
+  border-radius: var(--radius-md);
+  padding: 1.15rem;
+  transition: all var(--duration-smooth) var(--ease-apple);
+}
+
+.commercial-stat-box:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: var(--glass-border);
+  transform: translateY(-2px);
+}
+
+.commercial-number-row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.45rem;
+  margin: 0.45rem 0 0.2rem;
+}
+
+.commercial-revenue-text {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+}
+
+.commercial-ideas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1rem;
+}
+
+.commercial-idea-card {
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--glass-border-subtle);
+  border-radius: var(--radius-md);
+  padding: 1.15rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.75rem;
+  transition: all var(--duration-smooth) var(--ease-apple);
+}
+
+.commercial-idea-card:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: var(--glass-border);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-subtle);
+}
+
+.commercial-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.commercial-trigger-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: rgba(100, 210, 255, 0.1);
+  color: var(--apple-cyan);
+  border: 1px solid rgba(100, 210, 255, 0.25);
+  border-radius: var(--radius-pill);
+  padding: 0.25rem 0.65rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.commercial-card-title {
+  font-size: 0.96rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.35;
+  margin: 0.25rem 0 0.35rem;
+}
+
+.commercial-card-meta {
+  font-size: 0.78rem;
+  color: var(--text-tertiary);
+  line-height: 1.45;
+}
+
+.commercial-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--glass-border-subtle);
+  padding-top: 0.75rem;
+  margin-top: auto;
+}

@@ -31,7 +31,11 @@ class LinkedInDashboard {
       if (saved) {
         const parsed = JSON.parse(saved);
         if (parsed.version === DEFAULT_LINKEDIN_DATA.version) {
-          return { ...DEFAULT_LINKEDIN_DATA, ...parsed };
+          const merged = { ...DEFAULT_LINKEDIN_DATA, ...parsed };
+          if (!merged.commercial) {
+            merged.commercial = JSON.parse(JSON.stringify(DEFAULT_LINKEDIN_DATA.commercial));
+          }
+          return merged;
         }
       }
     } catch (e) {
@@ -717,6 +721,176 @@ class LinkedInDashboard {
   }
 
   // ------------------------------------------------------------------------
+  // Commercial Engine & Solution Sales Hub
+  // ------------------------------------------------------------------------
+  renderCommercialEngine() {
+    const comm = this.state.commercial || (DEFAULT_LINKEDIN_DATA && DEFAULT_LINKEDIN_DATA.commercial);
+    if (!comm) return;
+
+    const salesCount = comm.salesCount || 0;
+    const unitPrice = comm.unitPriceINR || 999;
+    const grossRevenue = salesCount * unitPrice;
+    const target = comm.salesTarget || 50;
+    const salesProgressPct = Math.min(100, (salesCount / target) * 100);
+
+    const leadRequests = comm.leadMagnetRequests || 0;
+    const convRate = comm.leadConversionRateEst || 25;
+    const pipelineRevenue = Math.round((leadRequests * (convRate / 100)) * unitPrice);
+
+    // Update Top Stat Numbers
+    const salesCountEl = document.getElementById('commSalesCount');
+    if (salesCountEl) salesCountEl.textContent = salesCount.toLocaleString();
+
+    const grossRevEl = document.getElementById('commGrossRevenue');
+    if (grossRevEl) grossRevEl.textContent = `₹${grossRevenue.toLocaleString()}`;
+
+    const progressBarEl = document.getElementById('commSalesProgressBar');
+    if (progressBarEl) progressBarEl.style.width = `${salesProgressPct}%`;
+
+    const leadCountEl = document.getElementById('commLeadCount');
+    if (leadCountEl) leadCountEl.textContent = leadRequests.toLocaleString();
+
+    const pipelineRevEl = document.getElementById('commPipelineRevenue');
+    if (pipelineRevEl) pipelineRevEl.textContent = `₹${pipelineRevenue.toLocaleString()}`;
+
+    const carouselsCountEl = document.getElementById('commCarouselsCount');
+    if (carouselsCountEl) carouselsCountEl.textContent = (this.state.carousels ? this.state.carousels.length : 5);
+
+    const carouselsPostedEl = document.getElementById('commCarouselsPosted');
+    if (carouselsPostedEl) carouselsPostedEl.textContent = comm.carouselsPosted || 1;
+
+    const carouselsSchedEl = document.getElementById('commCarouselsScheduled');
+    if (carouselsSchedEl) carouselsSchedEl.textContent = comm.carouselsScheduled || 4;
+
+    // Render Commercial Ideas Grid
+    const ideasGrid = document.getElementById('commercialIdeasGrid');
+    if (ideasGrid && comm.upcomingCommercialIdeas) {
+      ideasGrid.innerHTML = comm.upcomingCommercialIdeas.map(idea => `
+        <div class="commercial-idea-card" data-id="${idea.id}">
+          <div>
+            <div class="commercial-card-header">
+              <span class="tag-pill" style="font-size: 0.68rem; background: rgba(255, 159, 10, 0.12); color: var(--apple-orange);">${idea.tag}</span>
+              <span class="commercial-trigger-badge">
+                <span>💬 Trigger:</span>
+                <code>"${idea.leadMagnetTrigger}"</code>
+              </span>
+            </div>
+            <h4 class="commercial-card-title">${idea.title}</h4>
+            <div class="commercial-card-meta">
+              <div>🎯 <strong>Angle:</strong> ${idea.commercialAngle}</div>
+              <div style="margin-top: 3px;">📥 <strong>Freebie DM:</strong> ${idea.deliverable}</div>
+              <div style="margin-top: 3px; color: var(--apple-blue);">💼 <strong>Audience:</strong> ${idea.targetAudience}</div>
+            </div>
+          </div>
+          <div class="commercial-card-footer">
+            <span class="milestone-badge" style="font-size: 0.7rem; padding: 0.2rem 0.5rem; ${idea.status === 'Ready to Publish' ? 'background: rgba(48, 209, 88, 0.15); color: var(--apple-green); border-color: rgba(48, 209, 88, 0.3);' : ''}">
+              ${idea.status}
+            </span>
+            <button class="nav-pill-btn copy-comm-idea-btn" data-id="${idea.id}" style="font-size: 0.72rem; padding: 0.3rem 0.65rem;" title="Copy hook and post structure">
+              <span>📋 Copy Idea</span>
+            </button>
+          </div>
+        </div>
+      `).join('');
+    }
+  }
+
+  quickIncrementSale(delta = 1) {
+    if (!this.state.commercial) {
+      this.state.commercial = JSON.parse(JSON.stringify(DEFAULT_LINKEDIN_DATA.commercial));
+    }
+    this.state.commercial.salesCount = (this.state.commercial.salesCount || 0) + delta;
+    this.state.commercial.grossRevenueINR = this.state.commercial.salesCount * (this.state.commercial.unitPriceINR || 999);
+    this.saveState();
+    this.renderCommercialEngine();
+    this.playSuccessChime();
+    this.showToast(`💰 Sale logged! Total: ${this.state.commercial.salesCount} (₹${this.state.commercial.grossRevenueINR.toLocaleString()})`);
+  }
+
+  quickIncrementLead(delta = 1) {
+    if (!this.state.commercial) {
+      this.state.commercial = JSON.parse(JSON.stringify(DEFAULT_LINKEDIN_DATA.commercial));
+    }
+    this.state.commercial.leadMagnetRequests = (this.state.commercial.leadMagnetRequests || 0) + delta;
+    this.saveState();
+    this.renderCommercialEngine();
+    this.playHapticClick(700);
+    this.showToast(`💬 +1 Lead request logged! Total: ${this.state.commercial.leadMagnetRequests} leads`);
+  }
+
+  copyLdClaimEmail() {
+    const email = `Subject: L&D Reimbursement Request: The AI-Native PM Operating System & Implementation Toolkit
+
+Hi [Manager / HR Name],
+
+I would like to request reimbursement under our annual Learning & Development / Upskilling budget for The AI-Native PM Operating System & Implementation Toolkit (₹999).
+
+This toolkit provides direct production implementation assets for our Generative AI roadmap:
+• 50-sample automated Golden Eval benchmark sheets (testing factual grounding & model safety in CI/CD)
+• Pre-launch AI Product Ship Gate audit rubrics (preventing production incidents)
+• Behavior Spec PRD templates for negative testing and strict confidence bounds
+• Cost & latency cascade routing architectures (reducing token bloat by up to 70%)
+
+An Official GST Tax Invoice and Certificate of Completion are provided upon purchase for accounting compliance.
+
+Resource Link: https://quantamram.github.io/linkedin-creator-studio/
+
+Please let me know if this is approved to expense.
+
+Best regards,
+Ram chandar Sanaboyina`;
+
+    navigator.clipboard.writeText(email).then(() => {
+      this.playSuccessChime();
+      this.showToast('🧾 Copied 100% L&D Expense Email to clipboard!');
+    });
+  }
+
+  copyDmScript() {
+    const script = `--- 2-STEP DM LEAD MAGNET CONVERSION SCRIPT ---
+
+[STEP 1: SEND IMMEDIATELY UPON "GATES" COMMENT]
+"Hey [Name], thanks for engaging on my post! 🚀
+
+Here is your direct download link for the 1-Page AI Product Pre-Launch Ship Gates Scorecard (PDF):
+👉 [Insert Freebie Link / Notion / Drive]
+
+Use it in your next sprint review or architecture discussion with engineering leads. Let me know which gate your team is auditing first!"
+
+[STEP 2: SEND 24 HOURS LATER — THE FRICTIONLESS L&D CONVERSION BRIDGE]
+"Hey [Name], quick follow-up! 
+
+If your team is looking to operationalize those 7 gates right now without building from scratch, I packaged our entire production stack into The AI-Native PM Operating System:
+
+It includes our pre-built 50-example eval harness sheets, Behavior Spec PRD templates, and prompt routing cascades (₹999).
+
+Best part: It is 100% reimbursable through your employer’s annual L&D / Learning budget. An Official GST Tax Invoice and Certificate of Completion are generated automatically on checkout for simple expensing.
+
+Here’s the link if you'd like to check it out: [Operating System Link]
+
+Keep shipping! 🚢
+Ram"`;
+
+    navigator.clipboard.writeText(script).then(() => {
+      this.playSuccessChime();
+      this.showToast('✉️ Copied 2-Step DM Follow-Up Script to clipboard!');
+    });
+  }
+
+  copyCommercialIdea(ideaId) {
+    const comm = this.state.commercial || (DEFAULT_LINKEDIN_DATA && DEFAULT_LINKEDIN_DATA.commercial);
+    const idea = comm.upcomingCommercialIdeas.find(i => i.id === ideaId);
+    if (!idea) return;
+
+    const copyText = `TITLE: ${idea.title}\nTAG: ${idea.tag}\nCOMMERCIAL ANGLE: ${idea.commercialAngle}\nCOMMENT TRIGGER: Comment "${idea.leadMagnetTrigger}"\nFREE DELIVERABLE: ${idea.deliverable}\nTARGET AUDIENCE: ${idea.targetAudience}\nREIMBURSABLE: 100% Corporate L&D Reimbursable (Official GST Tax Invoice + Certificate provided)`;
+
+    navigator.clipboard.writeText(copyText).then(() => {
+      this.playSuccessChime();
+      this.showToast(`📋 Copied "${idea.title}" blueprint!`);
+    });
+  }
+
+  // ------------------------------------------------------------------------
   // Interactive Modals (Daily Metrics Logger & New Post Scheduler)
   // ------------------------------------------------------------------------
   openMetricsModal() {
@@ -973,6 +1147,29 @@ class LinkedInDashboard {
         }
       });
     });
+
+    // Commercial Engine Actions
+    const incSaleBtn = document.getElementById('quickIncSaleBtn');
+    if (incSaleBtn) incSaleBtn.addEventListener('click', () => this.quickIncrementSale(1));
+
+    const incLeadBtn = document.getElementById('quickIncLeadBtn');
+    if (incLeadBtn) incLeadBtn.addEventListener('click', () => this.quickIncrementLead(1));
+
+    const copyLdBtn = document.getElementById('copyLdClaimEmailBtn');
+    if (copyLdBtn) copyLdBtn.addEventListener('click', () => this.copyLdClaimEmail());
+
+    const copyDmBtn = document.getElementById('copyDmScriptBtn');
+    if (copyDmBtn) copyDmBtn.addEventListener('click', () => this.copyDmScript());
+
+    const commGrid = document.getElementById('commercialIdeasGrid');
+    if (commGrid) {
+      commGrid.addEventListener('click', (e) => {
+        const btn = e.target.closest('.copy-comm-idea-btn');
+        if (btn) {
+          this.copyCommercialIdea(btn.getAttribute('data-id'));
+        }
+      });
+    }
   }
 
   // ------------------------------------------------------------------------
@@ -983,6 +1180,7 @@ class LinkedInDashboard {
     this.renderActivityRings();
     this.renderHabitsList();
     this.renderMetricsOverview();
+    this.renderCommercialEngine();
     this.renderChart();
     this.renderScheduledPosts();
     this.renderCarouselStudio();
