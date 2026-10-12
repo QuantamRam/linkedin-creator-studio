@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LinkedIn Creator Studio — Ram chandar Sanaboyina</title>
+  <meta name="description" content="Apple-grade interactive LinkedIn manager and analytics dashboard. Track realistic 7,500 follower goal, daily locked-in habits, carousels, and posting schedules.">
+  <link rel="stylesheet" href="app.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Background Ambient Floating Mesh -->
+  <div class="ambient-mesh">
+    <div class="ambient-blob blob-1"></div>
+    <div class="ambient-blob blob-2"></div>
+    <div class="ambient-blob blob-3"></div>
+  </div>
+
+  <div class="app-container">
+    
+    <!-- Apple Floating Nav Bar -->
+    <header class="apple-nav">
+      <div class="nav-glass-bar">
+        <div class="nav-brand">
+          <div class="apple-logo-badge">in</div>
+          <div class="brand-text">
+            <h1>Ram chandar Sanaboyina</h1>
+            <div class="brand-badge">
+              <span class="live-pulse"></span>
+              The AI-Native AI PM
+            </div>
+          </div>
+        </div>
+
+        <div class="nav-actions">
+          <button id="openSyncModalBtn" class="nav-pill-btn primary" title="Log today's impressions and metrics">
+            <span>⚡</span>
+            <span>Daily Sync</span>
+          </button>
+          <button id="exportDataBtn" class="nav-pill-btn" title="Export JSON backup">
+            <span>💾</span>
+            <span>Export</span>
+          </button>
+          <button id="resetDataBtn" class="nav-pill-btn" title="Reset to verified data">
+            <span>↺</span>
+            <span>Reset</span>
+          </button>
+          <button id="themeToggleBtn" class="theme-toggle-btn" title="Toggle theme">
+            ☀️
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Hero: 7,500 Goal & Locked-in Daily Habits -->
+    <section class="hero-dashboard-grid">
+      
+      <!-- Card 1: Realistic 7,500 Goal Engine -->
+      <div class="apple-card goal-hero-card">
+        <div class="card-ambient-light"></div>
+        <div>
+          <div class="goal-header-row">
+            <div>
+              <span class="caption-label">MILESTONE TRACKER</span>
+              <h2 class="section-title" style="margin-top: 0.2rem;">
+                Target: 7,500 Followers
+              </h2>
+            </div>
+            <div style="display: flex; gap: 0.5rem; align-items: center;">
+              <span class="milestone-badge">🎉 5K Unlocked (Oct 8)</span>
+              <button id="quickIncFollowerBtn" class="nav-pill-btn" style="padding: 0.35rem 0.75rem; font-size: 0.75rem;" title="Simulate 1 new follower">+1</button>
+            </div>
+          </div>
+
+          <div class="goal-numbers-cluster">
+            <span id="heroCurrentFollowers" class="big-stat-number tabular">5,011</span>
+            <span id="heroTargetFollowers" class="target-stat-number tabular">/ 7,500</span>
+          </div>
+
+          <!-- Progress Bar to 7,500 Milestone -->
+          <div class="progress-container">
+            <div class="progress-labels">
+              <span>5,000 Milestone Base</span>
+              <span id="goalProgressPercent" class="tabular">66.8% of Goal</span>
+              <span>7,500 Target</span>
+            </div>
+            <div class="progress-track">
+              <div id="goalProgressFill" class="progress-fill"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Velocity & Projections Sub-Grid -->
+        <div class="goal-substats-grid">
+          <div class="substat-cell">
+            <div class="caption-label">REMAINING</div>
+            <div id="goalRemainingFollowers" class="substat-val tabular">2,489</div>
+            <div style="font-size: 0.72rem; color: var(--text-tertiary); margin-top: 2px;">to 7.5k milestone</div>
+          </div>
+
+          <div class="substat-cell">
+            <div class="caption-label">DAILY VELOCITY</div>
+            <div style="display: flex; align-items: baseline; gap: 0.3rem;">
+              <input id="dailyVelocityInput" type="number" class="substat-val tabular positive" style="width: 70px; background: transparent; border: none; outline: none; font-family: inherit; font-size: 1.35rem; font-weight: 700; color: var(--apple-green);" value="32" />
+              <span style="font-size: 0.8rem; color: var(--text-tertiary);">/day</span>
+            </div>
+            <div style="font-size: 0.72rem; color: var(--text-tertiary); margin-top: 2px;">net followers pace</div>
+          </div>
+
+          <div class="substat-cell">
+            <div class="caption-label">ESTIMATED ETA</div>
+            <div id="goalDaysRemaining" class="substat-val tabular">~78 days</div>
+            <div id="goalEstimatedDate" style="font-size: 0.72rem; color: var(--apple-blue); font-weight: 600; margin-top: 2px;">Dec 29, 2026</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2: Apple Activity Rings & Locked-in Daily Habits -->
+      <div class="apple-card habits-activity-card">
+        <div class="rings-header-row">
+          <div>
+            <span class="caption-label">DAILY DISCIPLINE</span>
+            <h2 class="section-title">Daily Habits Locked In</h2>
+          </div>
+          <span id="dailyHabitsScore" class="goal-pill-tag">3/5 Completed</span>
+        </div>
+
+        <!-- Apple Watch Style 3-Ring Visualization -->
+        <div class="rings-visualization-wrapper">
+          <div class="rings-svg-container">
+            <svg viewBox="0 0 120 120">
+              <!-- Outer Ring: Content / Post (Red) R=50 -->
+              <circle cx="60" cy="60" r="50" class="ring-bg ring-red" />
+              <circle id="ringContent" cx="60" cy="60" r="50" class="ring-progress ring-red" />
+
+              <!-- Middle Ring: Engagement / 15 Comments (Green) R=38 -->
+              <circle cx="60" cy="60" r="38" class="ring-bg ring-green" />
+              <circle id="ringEngagement" cx="60" cy="60" r="38" class="ring-progress ring-green" />
+
+              <!-- Inner Ring: Outreach / Inbounds (Blue) R=26 -->
+              <circle cx="60" cy="60" r="26" class="ring-bg ring-blue" />
+              <circle id="ringOutreach" cx="60" cy="60" r="26" class="ring-progress ring-blue" />
+            </svg>
+          </div>
+
+          <!-- Rings Legend -->
+          <div class="rings-legend">
+            <div class="legend-item">
+              <div class="legend-dot-label">
+                <span class="ring-color-dot dot-red"></span>
+                <span>Content & 1st Comment</span>
+              </div>
+              <span id="pctContentRing" class="legend-pct tabular">100%</span>
+            </div>
+            <div class="legend-item">
+              <div class="legend-dot-label">
+                <span class="ring-color-dot dot-green"></span>
+                <span>15 ICP Voice Comments</span>
+              </div>
+              <span id="pctEngagementRing" class="legend-pct tabular">0%</span>
+            </div>
+            <div class="legend-item">
+              <div class="legend-dot-label">
+                <span class="ring-color-dot dot-blue"></span>
+                <span>5 Outbound DMs & Sync</span>
+              </div>
+              <span id="pctOutreachRing" class="legend-pct tabular">50%</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Daily Habits Checklist -->
+        <div id="habitsChecklistContainer" class="habits-list">
+          <!-- Dynamically populated from state -->
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Metrics Counters Row -->
+    <section class="metrics-overview-row">
+      <div class="metric-stat-card">
+        <div class="card-top">
+          <span class="caption-label">12-MONTH REACH</span>
+          <div class="metric-icon-box icon-blue">🌐</div>
+        </div>
+        <div id="metricTotalImpressions" class="stat-value tabular">193,205</div>
+        <div class="stat-trend up">
+          <span>↑ +3.5k / mo avg</span>
+        </div>
+      </div>
+
+      <div class="metric-stat-card">
+        <div class="card-top">
+          <span class="caption-label">7-DAY IMPRESSIONS</span>
+          <div class="metric-icon-box icon-purple">⚡</div>
+        </div>
+        <div id="metricRecentImpressions" class="stat-value tabular">2,096</div>
+        <div class="stat-trend neutral">
+          <span>Peak: 682 on Oct 8</span>
+        </div>
+      </div>
+
+      <div class="metric-stat-card">
+        <div class="card-top">
+          <span class="caption-label">ENGAGEMENT RATE</span>
+          <div class="metric-icon-box icon-green">🎯</div>
+        </div>
+        <div id="metricEngagementRate" class="stat-value tabular">3.2%</div>
+        <div class="stat-trend up">
+          <span>Above tech industry avg (2.1%)</span>
+        </div>
+      </div>
+
+      <div class="metric-stat-card">
+        <div class="card-top">
+          <span class="caption-label">MEMBERS REACHED</span>
+          <div class="metric-icon-box icon-orange">👥</div>
+        </div>
+        <div id="metricMembersReached" class="stat-value tabular">374</div>
+        <div class="stat-trend up">
+          <span>30% Senior PMs & Tech Leads</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Analytics Trend & Schedule Row -->
+    <section class="analytics-schedule-grid">
+      
+      <!-- Analytics Chart Card -->
+      <div class="apple-card">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <div>
+            <span class="caption-label">PERFORMANCE VELOCITY</span>
+            <h2 class="section-title">Audience Engagement Curve</h2>
+          </div>
+          <div class="chart-header-actions">
+            <div id="chartMetricSwitch" class="segmented-control">
+              <button class="segment-btn active" data-metric="impressions">Impressions</button>
+              <button class="segment-btn" data-metric="engagements">Engagements</button>
+            </div>
+          </div>
+        </div>
+
+        <div id="analyticsChartContainer" class="chart-container">
+          <!-- Dynamically drawn SVG chart -->
+        </div>
+
+        <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--glass-border-subtle); padding-top: 0.9rem; font-size: 0.82rem; color: var(--text-tertiary);">
+          <span>Algorithm Note: Seed author 1st comment within 60 mins to bypass 360Brew penalty</span>
+          <span style="color: var(--apple-green); font-weight: 600;">100% External-Link Free in Body</span>
+        </div>
+      </div>
+
+      <!-- Auto-Updated Posting Schedule & Live Countdown -->
+      <div class="apple-card schedule-card">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.2rem;">
+          <div>
+            <span class="caption-label">CONTENT TIMING</span>
+            <h2 class="section-title">Posting Schedule</h2>
+          </div>
+          <button id="openNewPostModalBtn" class="nav-pill-btn" style="font-size: 0.78rem; padding: 0.4rem 0.8rem;">
+            <span>+ Add Post</span>
+          </button>
+        </div>
+
+        <!-- Live Countdown Clock -->
+        <div class="countdown-banner">
+          <div>
+            <span class="caption-label" style="color: var(--apple-blue);">NEXT OPTIMAL WINDOW</span>
+            <div id="nextPostTargetLabel" style="font-size: 0.82rem; font-weight: 600; color: var(--text-primary); margin-top: 2px;">
+              Tomorrow at 8:45 AM IST (Prime Window)
+            </div>
+          </div>
+          <div id="nextPostCountdownTimer" class="countdown-digits tabular">
+            --h --m --s
+          </div>
+        </div>
+
+        <!-- Scheduled Queue -->
+        <div id="scheduledPostsList" class="scheduled-posts-timeline">
+          <!-- Populated from state -->
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Apple Interactive Carousel Studio & Deck Viewer -->
+    <section class="carousel-studio-section">
+      <div class="section-header-row">
+        <div>
+          <span class="caption-label">THE AI-NATIVE AI PM IP BANK</span>
+          <h2 class="section-title">Carousel Topic Studio & Interactive Deck</h2>
+          <p class="section-subtitle">Preview, swipe, and copy high-converting slide sequences directly into Canva or LinkedIn</p>
+        </div>
+        <div style="display: flex; gap: 0.6rem;">
+          <button id="copySlideBtn" class="nav-pill-btn">
+            <span>📄</span>
+            <span>Copy Current Slide</span>
+          </button>
+          <button id="copyAllSlidesBtn" class="nav-pill-btn primary">
+            <span>📑</span>
+            <span>Copy Full Carousel</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="carousel-deck-container">
+        <!-- Sidebar: Topics List -->
+        <div class="carousel-topics-sidebar">
+          <div class="caption-label" style="margin-bottom: 0.4rem;">SELECT CAROUSEL PLAYBOOK</div>
+          <div id="carouselTopicsList" style="display: flex; flex-direction: column; gap: 0.6rem;">
+            <!-- Rendered from state -->
+          </div>
+        </div>
+
+        <!-- Main Slide Interactive Deck Viewer -->
+        <div class="slide-viewer-main">
+          <div id="slideCanvas" class="slide-canvas">
+            <div class="slide-top-bar">
+              <span id="slideAuthorTag" class="slide-author-pill">@ramchandarsanaboyina | 1/8</span>
+              <span id="slideNumberPill" class="slide-number-pill">Slide 1 of 8</span>
+            </div>
+
+            <div class="slide-content-body">
+              <div id="slideTopicTag" class="slide-tag">FOR PMS & BUILDERS</div>
+              <h3 id="slideHeadlineText" class="slide-headline">How to build a clickable AI prototype in 3 hours.</h3>
+              <p id="slideSubtextContent" class="slide-subtext">(Without waiting for an engineering sprint) — The LoCuS Stack Playbook 🛠️</p>
+            </div>
+
+            <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--glass-border-subtle); padding-top: 1rem; font-size: 0.78rem; color: var(--text-tertiary);">
+              <span>Building AI Products That Ship (₹999)</span>
+              <span>Swipe ➔</span>
+            </div>
+          </div>
+
+          <!-- Slide Controls -->
+          <div class="slide-deck-controls">
+            <button id="slidePrevBtn" class="icon-btn" title="Previous slide (Left Arrow)">‹</button>
+            <div id="slideDotsIndicator" class="slide-dots-indicator"></div>
+            <button id="slideNextBtn" class="icon-btn" title="Next slide (Right Arrow)">›</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2026 Hook Studio & Tester -->
+    <section class="hook-studio-section">
+      <div class="apple-card hook-box-card">
+        <div style="display: justify-content; align-items: center; margin-bottom: 1.2rem;">
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <div>
+              <span class="caption-label">ALGORITHM TESTED · 2026 EDITION</span>
+              <h2 class="section-title">2026 LinkedIn Hook Studio</h2>
+              <p class="section-subtitle">Battle-tested hook formulas from the LinkedIn skills repository to guarantee first 3-line dwell time</p>
+            </div>
+            <button id="copyHookBtn" class="nav-pill-btn primary">
+              <span>✨ Copy Hook</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Formula Chips -->
+        <div id="hookFormulasContainer" class="hook-formula-selector">
+          <!-- Rendered from state -->
+        </div>
+
+        <!-- Skeleton & Preview -->
+        <div class="hook-output-container">
+          <div class="caption-label" style="color: var(--apple-cyan); margin-bottom: 0.4rem;">FORMULA SKELETON:</div>
+          <div id="hookFormulaSkeleton" style="font-size: 0.85rem; color: var(--text-tertiary); margin-bottom: 1rem; font-style: italic;"></div>
+
+          <div class="caption-label" style="color: var(--apple-green); margin-bottom: 0.4rem;">GENERATED OPENING HOOK:</div>
+          <div id="hookOutputText" class="hook-generated-text"></div>
+
+          <div style="display: flex; gap: 0.8rem; align-items: center; border-top: 1px solid var(--glass-border-subtle); padding-top: 0.8rem;">
+            <span class="caption-label" style="white-space: nowrap;">TARGET TOPIC:</span>
+            <input id="hookTopicInput" type="text" class="apple-input" style="padding: 0.4rem 0.8rem; font-size: 0.85rem;" readonly />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Top Posts & Demographics Grid -->
+    <section class="posts-demographics-grid">
+      
+      <!-- Top Posts Audit Table -->
+      <div class="apple-card">
+        <span class="caption-label">VERIFIED HISTORICAL PERFORMANCE</span>
+        <h2 class="section-title">Top Performing Posts</h2>
+        
+        <table class="posts-table">
+          <thead>
+            <tr>
+              <th>Post Title / Topic</th>
+              <th>Date</th>
+              <th>Impressions</th>
+              <th>Engagements</th>
+            </tr>
+          </thead>
+          <tbody id="topPostsTableBody">
+            <!-- Rendered from state -->
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Audience ICP Demographics -->
+      <div class="apple-card">
+        <span class="caption-label">TARGET ICP AUDIENCE PROFILE</span>
+        <h2 class="section-title">Audience Demographics</h2>
+        
+        <div style="margin-top: 1rem;">
+          <div class="caption-label" style="color: var(--apple-blue); margin-bottom: 0.4rem;">SENIORITY & JOB TITLES</div>
+          <div id="demographicsTitlesContainer" class="demographics-group">
+            <!-- Dynamically populated -->
+          </div>
+
+          <div class="caption-label" style="color: var(--apple-purple); margin-top: 1.2rem; margin-bottom: 0.4rem;">GEOGRAPHIC CONCENTRATION</div>
+          <div id="demographicsLocationsContainer" class="demographics-group">
+            <!-- Dynamically populated -->
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer style="margin-top: 3rem; text-align: center; color: var(--text-tertiary); font-size: 0.82rem;">
+      <p>LinkedIn Creator Management Dashboard · Built with Apple Fluid Design Principles</p>
+      <p style="margin-top: 0.3rem;">Positioning: <strong>"The AI-Native AI PM"</strong> · Ram chandar Sanaboyina</p>
+    </footer>
+
+  </div>
+
+  <!-- Modal: Daily Metrics Sync -->
+  <div id="metricsUpdateModal" class="modal-backdrop">
+    <div class="apple-sheet">
+      <div class="sheet-header">
+        <div>
+          <span class="caption-label">DATA RECORDING</span>
+          <h3 class="section-title">Log Today's LinkedIn Numbers</h3>
+        </div>
+        <button id="closeSyncModalBtn" class="icon-btn" style="width: 32px; height: 32px;">✕</button>
+      </div>
+
+      <form id="metricsUpdateForm">
+        <div class="form-grid-2">
+          <div class="form-group">
+            <label class="form-label">Current Follower Count</label>
+            <input id="inputFollowers" type="number" class="apple-input tabular" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Today's Impressions</label>
+            <input id="inputImpressions" type="number" class="apple-input tabular" required />
+          </div>
+        </div>
+
+        <div class="form-grid-2">
+          <div class="form-group">
+            <label class="form-label">Today's Engagements</label>
+            <input id="inputEngagements" type="number" class="apple-input tabular" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Members Reached</label>
+            <input id="inputMembersReached" type="number" class="apple-input tabular" />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Today's Post Title (Optional)</label>
+          <input id="inputPostTitle" type="text" class="apple-input" placeholder="e.g. The LoCuS Prototype Stack" />
+        </div>
+
+        <div style="display: flex; justify-content: flex-end; gap: 0.8rem; margin-top: 1.5rem;">
+          <button type="button" class="nav-pill-btn" onclick="document.getElementById('metricsUpdateModal').classList.remove('active')">Cancel</button>
+          <button type="submit" class="nav-pill-btn primary">Save & Update Dashboard</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal: Schedule New Post -->
+  <div id="newPostModal" class="modal-backdrop">
+    <div class="apple-sheet">
+      <div class="sheet-header">
+        <div>
+          <span class="caption-label">CONTENT QUEUE</span>
+          <h3 class="section-title">Schedule New Post</h3>
+        </div>
+        <button id="closeNewPostModalBtn" class="icon-btn" style="width: 32px; height: 32px;">✕</button>
+      </div>
+
+      <form id="newPostForm">
+        <div class="form-group">
+          <label class="form-label">Post Title / Working Headline</label>
+          <input id="newPostTitleInput" type="text" class="apple-input" placeholder="e.g. 3 Rules for AI Evals Before Shipping" required />
+        </div>
+
+        <div class="form-grid-2">
+          <div class="form-group">
+            <label class="form-label">Date</label>
+            <input id="newPostDateInput" type="date" class="apple-input" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Optimal Time</label>
+            <input id="newPostTimeInput" type="text" class="apple-input" value="08:45 AM IST" />
+          </div>
+        </div>
+
+        <div class="form-grid-2">
+          <div class="form-group">
+            <label class="form-label">Content Pillar</label>
+            <select id="newPostPillarInput" class="apple-input">
+              <option value="Vibe-Coding Prototypes">Vibe-Coding Prototypes</option>
+              <option value="Product Strategy">Product Strategy</option>
+              <option value="Model Cascades">Model Cascades & Economics</option>
+              <option value="Behavior Specs">Behavior Specs & Evals</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Format</label>
+            <select id="newPostFormatInput" class="apple-input">
+              <option value="Carousel (8 slides)">Carousel (8 slides)</option>
+              <option value="Text + Framework Graphic">Text + Graphic</option>
+              <option value="Case Study Breakdown">Case Study Breakdown</option>
+              <option value="Video Teardown">Video Teardown</option>
+            </select>
+          </div>
+        </div>
+
+        <div style="display: flex; justify-content: flex-end; gap: 0.8rem; margin-top: 1.5rem;">
+          <button type="button" class="nav-pill-btn" onclick="document.getElementById('newPostModal').classList.remove('active')">Cancel</button>
+          <button type="submit" class="nav-pill-btn primary">Add to Schedule</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toastNotification" class="toast-notification"></div>
+
+  <!-- Data Script First, then App Script -->
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
