@@ -373,6 +373,63 @@ const DEFAULT_LINKEDIN_DATA = {
           subtext: "Save this post to audit your team's autonomous agent architecture.\nWhat has been your biggest bottleneck deploying agents to production?"
         }
       ]
+    },
+    {
+      id: "carousel-7-ship-gates",
+      title: "The 7 AI Product Ship Gates (Pre-Launch Audit) 🚢",
+      subtitle: "Never ship an AI feature on 'vibes'. The 7 non-negotiable production gates top AI PMs enforce before deployment",
+      slidesCount: 8,
+      category: "Playbook Conversion & Solution",
+      slides: [
+        {
+          num: 1,
+          tag: "PRODUCTION PRE-LAUNCH AUDIT",
+          headline: "The 7 AI Product Ship Gates.",
+          subtext: "Never deploy an AI feature on 'vibes'.\nIf your model feature doesn't pass all 7 gates, it's not ready for production 🚢"
+        },
+        {
+          num: 2,
+          tag: "GATE 1 · NEGATIVE TESTING",
+          headline: "Gate 1: The Deterministic Boundary Gate",
+          subtext: "Junior PMs only test what the model SHOULD do.\nSenior AI PMs audit the 'Forbidden Zone': 100% of out-of-scope queries must trigger deterministic refusal or structured routing—zero guessing allowed."
+        },
+        {
+          num: 3,
+          tag: "GATE 2 · EVAL BENCHMARKING",
+          headline: "Gate 2: The Golden Dataset Eval Gate",
+          subtext: "Testing 5 prompts manually in Slack is not an audit.\nRun a 50+ sample golden eval in CI/CD. Ship requires ≥92% factual accuracy and ZERO regression on previous edge cases."
+        },
+        {
+          num: 4,
+          tag: "GATE 3 · RELIABILITY & UX",
+          headline: "Gate 3: The Structured Output Schema Gate",
+          subtext: "Never let frontend UI render unvalidated raw strings.\nEnforce strict Pydantic/JSON schemas with 1-shot auto-retry. If schema validation fails twice, route to cached UI components."
+        },
+        {
+          num: 5,
+          tag: "GATE 4 · COST & SPEED",
+          headline: "Gate 4: The Token Budget & P95 Latency Gate",
+          subtext: "Great AI features die from $0.08 unit costs and 8-second waits.\nHard limits: Max token cap at $0.004/turn, P95 latency < 1.8s, and Time-To-First-Token (TTFT) < 600ms via streaming."
+        },
+        {
+          num: 6,
+          tag: "GATE 5 · RESILIENCE",
+          headline: "Gate 5: The Model Cascade & Fallback Gate",
+          subtext: "When OpenAI or Anthropic hits 429 rate limits or outages, does your product crash?\nTier 1: Semantic Cache (30ms) → Tier 2: Small Fast Model → Tier 3: Frontier Model → Tier 4: Graceful UI Fallback."
+        },
+        {
+          num: 7,
+          tag: "GATES 6 & 7 · TELEMETRY & ROLLOUT",
+          headline: "Gates 6 & 7: User Regret & Canary Rollback",
+          subtext: "Gate 6: Track implicit regret signals (immediate query resets, manual text overrides, thumbs down <3%).\nGate 7: 5% canary deployment with auto-rollback if hallucination score spikes >1.5%."
+        },
+        {
+          num: 8,
+          tag: "PRODUCTION TOOLKIT · 100% L&D REIMBURSABLE",
+          headline: "Get The AI-Native PM Operating System",
+          subtext: "🛠️ Stop building from scratch. Get the pre-built 50-sample Eval Sheets, 7-Gate Audit Checklists, and Behavior Spec templates (₹999).\n🧾 100% REIMBURSABLE: Official GST tax invoice & completion certificate provided for your company's L&D expense claim!\n👉 Comment 'GATES' for the free 1-page PDF scorecard, or link in 1st comment."
+        }
+      ]
     }
   ],
   topPosts: [
