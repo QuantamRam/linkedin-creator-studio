@@ -1,14 +1,16 @@
-// Default Seed Data for Ram Chandar Sanaboyina - LinkedIn Manager Dashboard
+// Verified Dataset for Ram Chandar Sanaboyina - LinkedIn Manager Dashboard
+// Updated with verified data from AggregateAnalytics_Ram chandar Sanaboyina_2026-10-06_2026-10-12.xlsx
 // Category: "The AI-Native AI PM" | Target: 7,500 Realistic Milestone
 
 const DEFAULT_LINKEDIN_DATA = {
+  version: 2,
   creator: {
     name: "Ram chandar Sanaboyina",
     handle: "@ramchandarsanaboyina",
     profileUrl: "https://www.linkedin.com/in/ramchandarsanaboyina",
     headline: "The AI-Native AI PM 🚀 | Author of 'Building AI Products That Ship' | Ex-Amazon/Blinkit Audience",
     avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=256&h=256&q=80",
-    currentFollowers: 5011,
+    currentFollowers: 5021,
     targetFollowers: 7500,
     milestoneAchieved: 5000,
     milestoneAchievedDate: "2026-10-08",
@@ -19,23 +21,23 @@ const DEFAULT_LINKEDIN_DATA = {
     productOffer: "Building AI Products That Ship (Digital Playbook, ₹999)"
   },
   metrics: {
-    totalImpressions12M: 193205,
-    membersReached12M: 69045,
-    recentImpressions7D: 2096,
-    recentEngagements7D: 17,
-    recentMembersReached7D: 374,
-    engagementRate: "3.2%",
-    profileConversionRate: "12.4%",
-    totalPosts: 42
+    totalImpressions12M: 194563,
+    membersReached12M: 69249,
+    recentImpressions7D: 1358,
+    recentEngagements7D: 4,
+    recentMembersReached7D: 204,
+    engagementRate: "3.1%",
+    profileConversionRate: "12.6%",
+    totalPosts: 43
   },
   history7D: [
-    { date: "10/03/2026", impressions: 266, engagements: 4, followers: 4976 },
-    { date: "10/04/2026", impressions: 223, engagements: 2, followers: 4984 },
-    { date: "10/05/2026", impressions: 482, engagements: 4, followers: 4992 },
-    { date: "10/06/2026", impressions: 138, engagements: 1, followers: 4995 },
-    { date: "10/07/2026", impressions: 221, engagements: 3, followers: 4998 },
-    { date: "10/08/2026", impressions: 682, engagements: 3, followers: 5005 },
-    { date: "10/09/2026", impressions: 84, engagements: 1, followers: 5011 }
+    { date: "10/06/2026", impressions: 138, engagements: 1, followers: 4995, newFollowers: 22 },
+    { date: "10/07/2026", impressions: 221, engagements: 0, followers: 5003, newFollowers: 8 },
+    { date: "10/08/2026", impressions: 682, engagements: 3, followers: 5007, newFollowers: 4 },
+    { date: "10/09/2026", impressions: 116, engagements: 0, followers: 5009, newFollowers: 2 },
+    { date: "10/10/2026", impressions: 38, engagements: 0, followers: 5012, newFollowers: 3 },
+    { date: "10/11/2026", impressions: 147, engagements: 0, followers: 5017, newFollowers: 5 },
+    { date: "10/12/2026", impressions: 16, engagements: 0, followers: 5021, newFollowers: 6 }
   ],
   dailyHabits: [
     {
@@ -277,33 +279,33 @@ const DEFAULT_LINKEDIN_DATA = {
   ],
   topPosts: [
     {
-      title: "2 filters to kill the wrong AI ideas before Monday morning",
-      date: "10/05/2026",
-      impressions: 615,
-      engagements: 4,
-      url: "https://www.linkedin.com/posts/ramchandarsanaboyina_2-filters-to-kill-the-wrong-ai-ideas-ugcPost-7512725533907013632-4UjN",
-      notes: "Top performing post in October. High saves and bookmark rate from Senior PMs."
-    },
-    {
       title: "The LoCuS prototype stack: Build clickable AI apps in 3 hours",
       date: "10/08/2026",
-      impressions: 347,
+      impressions: 525,
       engagements: 3,
       url: "https://www.linkedin.com/posts/ramchandarsanaboyina_the-locus-prototype-stack-ugcPost-7513537224559214592-H_Av",
-      notes: "Unlocks 5,000 follower milestone! 360Brew algo recovery plan deployed."
+      notes: "Top post of the week! 525 impressions, unlocked 5,000 milestone."
+    },
+    {
+      title: "2 filters to kill the wrong AI ideas before Monday morning",
+      date: "10/05/2026",
+      impressions: 347,
+      engagements: 4,
+      url: "https://www.linkedin.com/posts/ramchandarsanaboyina_2-filters-to-kill-the-wrong-ai-ideas-ugcPost-7512725533907013632-4UjN",
+      notes: "High save rate among Senior PMs and Product Directors."
     },
     {
       title: "PM to AI PM: Same title, 22% more pay & 3x higher leverage",
       date: "10/01/2026",
-      impressions: 311,
-      engagements: 4,
+      impressions: 111,
+      engagements: 1,
       url: "https://www.linkedin.com/posts/ramchandarsanaboyina_pm-to-ai-pm-same-title-22-more-pay-ugcPost-7511303671461240832-HoJB",
-      notes: "Career pivot angle. High DM inbound interest from Mid/Senior PMs."
+      notes: "Career transition angle. Inbound messages from aspiring AI PMs."
     },
     {
       title: "The 39% headcount cut: Which half of PM are you?",
       date: "10/03/2026",
-      impressions: 300,
+      impressions: 54,
       engagements: 3,
       url: "https://www.linkedin.com/posts/ramchandarsanaboyina_the-39-headcount-cut-which-half-of-pm-are-ugcPost-7512006027899510784-U4k7",
       notes: "Contrarian status hook. Solid debate in comments."
@@ -311,28 +313,30 @@ const DEFAULT_LINKEDIN_DATA = {
   ],
   demographics: {
     titles: [
-      { name: "Senior Product Managers", percent: 30 },
-      { name: "Product Managers & Leads", percent: 24 },
-      { name: "Software Engineers & AI Devs", percent: 18 },
-      { name: "Founders & Executives", percent: 14 },
-      { name: "Consultants & Strategists", percent: 14 }
+      { name: "Senior PMs & Senior Leaders", percent: 38 },
+      { name: "Product Managers", percent: 19 },
+      { name: "Entry PMs & APMs", percent: 24 },
+      { name: "Directors, CXOs & Founders", percent: 12 },
+      { name: "Software Engineers & AI Devs", percent: 7 }
     ],
     locations: [
-      { name: "Greater Bengaluru Area", percent: 28 },
-      { name: "Hyderabad Tech Corridor", percent: 24 },
-      { name: "San Francisco Bay Area", percent: 12 },
-      { name: "London Metropolitan Area", percent: 9 },
-      { name: "New York City Metro", percent: 8 },
-      { name: "Other Global Tech Hubs", percent: 19 }
+      { name: "Greater Bengaluru Area", percent: 26 },
+      { name: "Greater Hyderabad Area", percent: 24 },
+      { name: "Greater Delhi Area", percent: 9 },
+      { name: "Greater Chennai Area", percent: 8 },
+      { name: "Mumbai Metropolitan Region", percent: 4 },
+      { name: "Global & US Tech Hubs (SF/NYC)", percent: 29 }
     ],
     companies: [
-      { name: "Amazon", percent: "2.1%" },
-      { name: "Google", percent: "1.2%" },
-      { name: "Microsoft", percent: "1.1%" },
-      { name: "Flipkart", percent: "1.0%" },
-      { name: "Blinkit", percent: "0.9%" },
-      { name: "Accenture", percent: "0.8%" },
-      { name: "JPMorganChase", percent: "0.7%" }
+      { name: "Amazon", percent: "2%" },
+      { name: "Google", percent: "< 1%" },
+      { name: "Microsoft", percent: "< 1%" },
+      { name: "Accenture", percent: "< 1%" },
+      { name: "Blinkit", percent: "< 1%" },
+      { name: "JPMorganChase", percent: "< 1%" },
+      { name: "Flipkart", percent: "< 1%" },
+      { name: "Deloitte", percent: "< 1%" },
+      { name: "Adobe", percent: "< 1%" }
     ]
   },
   hookFormulas: [

@@ -4,7 +4,7 @@
 // Realistic 7,500 Follower Goal | Apple Activity Rings | Interactive Analytics
 // ==========================================================================
 
-const STORAGE_KEY = 'ram_linkedin_dashboard_state_v1';
+const STORAGE_KEY = 'ram_linkedin_dashboard_state_v2';
 const THEME_KEY = 'ram_linkedin_theme_pref';
 
 class LinkedInDashboard {
@@ -30,18 +30,21 @@ class LinkedInDashboard {
       const saved = localStorage.getItem(STORAGE_KEY);
       if (saved) {
         const parsed = JSON.parse(saved);
-        // Ensure structure is aligned
-        return { ...DEFAULT_LINKEDIN_DATA, ...parsed };
+        if (parsed.version === DEFAULT_LINKEDIN_DATA.version) {
+          return { ...DEFAULT_LINKEDIN_DATA, ...parsed };
+        }
       }
     } catch (e) {
       console.warn('Failed to load state from localStorage, falling back to defaults', e);
     }
-    return JSON.parse(JSON.stringify(DEFAULT_LINKEDIN_DATA));
+    const fresh = JSON.parse(JSON.stringify(DEFAULT_LINKEDIN_DATA));
+    this.saveState(fresh);
+    return fresh;
   }
 
-  saveState() {
+  saveState(customState) {
     try {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(this.state));
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(customState || this.state));
     } catch (e) {
       console.error('Failed to save state to localStorage', e);
     }
