@@ -3,14 +3,14 @@
 // Category: "The AI-Native AI PM" | Target: 7,500 Realistic Milestone
 
 const DEFAULT_LINKEDIN_DATA = {
-  version: 7,
+  version: 8,
   creator: {
     name: "Ram chandar Sanaboyina",
     handle: "@ramchandarsanaboyina",
     profileUrl: "https://www.linkedin.com/in/ramchandarsanaboyina",
     headline: "The AI-Native AI PM 🚀 | Systems, Evals & Model Cascades | Ex-Amazon/Blinkit Audience",
     avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=256&h=256&q=80",
-    currentFollowers: 5021,
+    currentFollowers: 5049,
     targetFollowers: 7500,
     milestoneAchieved: 5000,
     milestoneAchievedDate: "2026-10-08",
@@ -22,14 +22,14 @@ const DEFAULT_LINKEDIN_DATA = {
     productOffer: "The AI-Native PM Operating System & Implementation Toolkit (₹999 · 100% Corporate L&D Reimbursable with Official Invoice & Certificate)"
   },
   metrics: {
-    totalImpressions12M: 194563,
-    membersReached12M: 69249,
-    recentImpressions7D: 1358,
-    recentEngagements7D: 4,
-    recentMembersReached7D: 204,
-    engagementRate: "3.1%",
-    profileConversionRate: "12.6%",
-    totalPosts: 43
+    totalImpressions12M: 195020,
+    membersReached12M: 69299,
+    recentImpressions7D: 1814,
+    recentEngagements7D: 7,
+    recentMembersReached7D: 254,
+    engagementRate: "3.2%",
+    profileConversionRate: "14.2%",
+    totalPosts: 44
   },
   commercial: {
     productName: "The AI-Native PM Operating System & Implementation Toolkit",
@@ -39,7 +39,7 @@ const DEFAULT_LINKEDIN_DATA = {
     grossRevenueINR: 0,
     leadMagnetRequests: 0,
     leadConversionRateEst: 25,
-    carouselsPosted: 1,
+    carouselsPosted: 2,
     carouselsScheduled: 4,
     corporateReimbursableRate: 100,
     averageLdBudgetINR: 50000,
@@ -107,13 +107,13 @@ const DEFAULT_LINKEDIN_DATA = {
     ]
   },
   history7D: [
-    { date: "10/06/2026", impressions: 138, engagements: 1, followers: 4995, newFollowers: 22 },
-    { date: "10/07/2026", impressions: 221, engagements: 0, followers: 5003, newFollowers: 8 },
-    { date: "10/08/2026", impressions: 682, engagements: 3, followers: 5007, newFollowers: 4 },
-    { date: "10/09/2026", impressions: 116, engagements: 0, followers: 5009, newFollowers: 2 },
-    { date: "10/10/2026", impressions: 38, engagements: 0, followers: 5012, newFollowers: 3 },
-    { date: "10/11/2026", impressions: 147, engagements: 0, followers: 5017, newFollowers: 5 },
-    { date: "10/12/2026", impressions: 16, engagements: 0, followers: 5021, newFollowers: 6 }
+    { date: "10/07/2026", impressions: 221, engagements: 0, followers: 5000, newFollowers: 8 },
+    { date: "10/08/2026", impressions: 682, engagements: 3, followers: 5004, newFollowers: 4 },
+    { date: "10/09/2026", impressions: 116, engagements: 0, followers: 5006, newFollowers: 2 },
+    { date: "10/10/2026", impressions: 38, engagements: 0, followers: 5009, newFollowers: 3 },
+    { date: "10/11/2026", impressions: 147, engagements: 0, followers: 5014, newFollowers: 5 },
+    { date: "10/12/2026", impressions: 565, engagements: 3, followers: 5040, newFollowers: 26 },
+    { date: "10/13/2026", impressions: 45, engagements: 1, followers: 5049, newFollowers: 9 }
   ],
   dailyHabits: [
     {
@@ -159,10 +159,12 @@ const DEFAULT_LINKEDIN_DATA = {
       time: "Mon · 08:45 AM IST",
       format: "Document Carousel (8 slides)",
       title: "The Death of Jira User Stories for AI: Meet The Behavior Spec",
-      status: "Ready",
+      status: "Published",
       hookPreview: "R.I.P. to traditional Jira user stories for AI. Writing 'As a user I want...' burns $50,000 in model hallucinations. Here is the Behavior Spec:",
       targetPillar: "Playbook Conversion",
-      primaryGoal: "Playbook Sales & Comments"
+      primaryGoal: "Playbook Sales & Comments",
+      postUrl: "https://www.linkedin.com/posts/ramchandarsanaboyina_rip-to-jira-user-stories-for-ai-products-ugcPost-7515347032404885505--g0y",
+      metrics: "328 Impressions · 4 Engagements · +26 Followers Spike"
     },
     {
       id: "post-tue",
@@ -511,23 +513,31 @@ const DEFAULT_LINKEDIN_DATA = {
     {
       title: "The LoCuS prototype stack: Build clickable AI apps in 3 hours",
       date: "10/08/2026",
-      impressions: 525,
+      impressions: 577,
       engagements: 3,
       url: "https://www.linkedin.com/posts/ramchandarsanaboyina_the-locus-prototype-stack-ugcPost-7513537224559214592-H_Av",
-      notes: "Top post of the week! 525 impressions, unlocked 5,000 milestone."
+      notes: "Top post of the week! 577 impressions, unlocked 5,000 milestone."
     },
     {
       title: "2 filters to kill the wrong AI ideas before Monday morning",
       date: "10/05/2026",
-      impressions: 347,
+      impressions: 446,
       engagements: 4,
       url: "https://www.linkedin.com/posts/ramchandarsanaboyina_2-filters-to-kill-the-wrong-ai-ideas-ugcPost-7512725533907013632-4UjN",
       notes: "High save rate among Senior PMs and Product Directors."
     },
     {
+      title: "The Death of Jira User Stories for AI: Meet The Behavior Spec",
+      date: "10/12/2026",
+      impressions: 328,
+      engagements: 4,
+      url: "https://www.linkedin.com/posts/ramchandarsanaboyina_rip-to-jira-user-stories-for-ai-products-ugcPost-7515347032404885505--g0y",
+      notes: "Drove +26 followers in 24 hours! #1 post for engagement & conversions."
+    },
+    {
       title: "PM to AI PM: Same title, 22% more pay & 3x higher leverage",
       date: "10/01/2026",
-      impressions: 111,
+      impressions: 83,
       engagements: 1,
       url: "https://www.linkedin.com/posts/ramchandarsanaboyina_pm-to-ai-pm-same-title-22-more-pay-ugcPost-7511303671461240832-HoJB",
       notes: "Career transition angle. Inbound messages from aspiring AI PMs."
@@ -535,7 +545,7 @@ const DEFAULT_LINKEDIN_DATA = {
     {
       title: "The 39% headcount cut: Which half of PM are you?",
       date: "10/03/2026",
-      impressions: 54,
+      impressions: 52,
       engagements: 3,
       url: "https://www.linkedin.com/posts/ramchandarsanaboyina_the-39-headcount-cut-which-half-of-pm-are-ugcPost-7512006027899510784-U4k7",
       notes: "Contrarian status hook. Solid debate in comments."
@@ -544,10 +554,11 @@ const DEFAULT_LINKEDIN_DATA = {
   demographics: {
     titles: [
       { name: "Senior PMs & Senior Leaders", percent: 38 },
-      { name: "Product Managers", percent: 19 },
       { name: "Entry PMs & APMs", percent: 24 },
-      { name: "Directors, CXOs & Founders", percent: 12 },
-      { name: "Software Engineers & AI Devs", percent: 7 }
+      { name: "Product Managers", percent: 19 },
+      { name: "Directors, CXOs & Founders", percent: 13 },
+      { name: "Recruiters & Talent Acquisition", percent: 6 },
+      { name: "Software Engineers & AI Devs", percent: 4 }
     ],
     locations: [
       { name: "Greater Bengaluru Area", percent: 26 },
