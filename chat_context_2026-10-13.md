@@ -121,3 +121,20 @@
 * **Netlify Live URL:** [`https://10098726.netlify.app/`](https://10098726.netlify.app/)
 * **GitHub Pages Live URL:** [`https://quantamram.github.io/linkedin-creator-studio/`](https://quantamram.github.io/linkedin-creator-studio/)
 * **Data Version:** `version: 8` (Auto-reloaded in localStorage)
+
+---
+
+## 👑 PERMANENT HARDCODED RULE: THE "SLAY" POST CAPTION ENGINE
+
+*Locked in on October 13, 2026:*
+Every single LinkedIn post description/caption MUST strictly follow the **SLAY Framework**:
+
+1. **S — Story (In the Middle):**
+   * Start in media res. Drop the reader right into the crisis, friction, or decisive moment. Zero chronological backstory or warm-up.
+2. **L — Lesson (Lead with the Truth):**
+   * What did this breakdown reveal? Reframe the problem with an authoritative, eye-opening takeaway.
+3. **A — Action (The Transformation):**
+   * Break the lesson into 3 to 5 tactical, numbered execution steps that readers can implement immediately.
+4. **Y — You (Engagement Catalyst):**
+   * Close with a direct "What do you think?" or targeted discussion question to trigger comment velocity and out-of-network distribution.
+
