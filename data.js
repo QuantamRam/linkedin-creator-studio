@@ -625,6 +625,15 @@ const DEFAULT_LINKEDIN_DATA = {
       formula: "You're constantly asked: '{Choice A}' or '{Choice B}'? That's the wrong question. The real leverage is {Synthesis}.",
       exampleTopic: "Speed vs Quality in AI Product Shipping",
       generatedHook: "Executive teams keep asking AI PMs: 'Do you want to ship fast, or do you want zero hallucinations?' That is a false binary. The top 5% of AI PMs do neither: they build automated eval harnesses that let them ship in 48 hours with guaranteed confidence bounds:"
+    },
+    {
+      id: "f-slay",
+      code: "SLAY",
+      name: "The S.L.A.Y. Viral Framework",
+      category: "6-Figure Viral Engine",
+      formula: "S: {Story In Media Res} → L: {Core Lesson / Truth} → A: {3-5 Action Steps} → Y: {You - What do you think?}",
+      exampleTopic: "Senior AI PM Interview Rubrics & Production Failures",
+      generatedHook: "The candidate froze across the table at 2:30 PM when I asked the third question. We had stopped asking 'How would you improve Spotify?'. That's when I saw the brutal reality: 90% of PMs prep for deterministic SaaS, but Senior AI PM interviews test probabilistic failure modes. Here is the 5-step playbook to ace the rubric:"
     }
   ]
 };
